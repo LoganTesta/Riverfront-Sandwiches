@@ -1,0 +1,1374 @@
+﻿
+/***############### General Styling Reset and Setup: reset, grid, typography, general classes and divs.  Mobile-first styling setup. ***/
+/***########## Reset the styles, add box-sizing: border-box. ***/
+html, body, div, span, p, img, a, br, ul, li, ol, header, nav, footer, table, button, label, input, textarea, select, tr, td, th, h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/*For ease of development and maintainability, combine an element's width, padding, margin, and border into a final value, and enable this on all elements. */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/***########## Grid Column layout available.  Desktop and mobile settings.  Automatically make columns full width below a certain width. ***/
+.content {
+    width: 100%;
+    padding: 20px 10px 20px 10px;
+}
+
+.content-row {
+    width: 100%;
+    padding: 0;
+}
+
+    .content-row:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .content-row.no-content-row-padding {
+        padding: 0;
+    }
+
+.col-sma-1, .col-sma-2, .col-sma-3, .col-sma-4, .col-sma-5, .col-sma-6, .col-sma-7, .col-sma-8, .col-sma-9, .col-sma-10, .col-sma-11, .col-sma-12,
+.col-lar-1, .col-lar-2, .col-lar-3, .col-lar-4, .col-lar-5, .col-lar-6, .col-lar-7, .col-lar-8, .col-lar-9, .col-lar-10, .col-lar-11, .col-lar-12 {
+    float: none;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Switch to 12 columns at 700px for small columns and 1200px for large columns. */
+@media only screen and (min-width: 700px) {
+    .content-row {
+        padding: 10px 0 10px 0;
+    }
+
+        .content-row:first-of-type {
+            padding-top: 0;
+        }
+
+        .content-row:last-of-type {
+            padding-bottom: 0;
+        }
+
+    .col-sma-1, .col-sma-2, .col-sma-3, .col-sma-4, .col-sma-5, .col-sma-6, .col-sma-7, .col-sma-8, .col-sma-9, .col-sma-10, .col-sma-11, .col-sma-12 {
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .col-sma-1 {
+        width: 8.333333%;
+    }
+
+    .col-sma-2 {
+        width: 16.666667%;
+    }
+
+    .col-sma-3 {
+        width: 25%;
+    }
+
+    .col-sma-4 {
+        width: 33.333333%;
+    }
+
+    .col-sma-5 {
+        width: 41.666667%;
+    }
+
+    .col-sma-6 {
+        width: 50%;
+    }
+
+    .col-sma-7 {
+        width: 58.33333%;
+    }
+
+    .col-sma-8 {
+        width: 66.666667%;
+    }
+
+    .col-sma-9 {
+        width: 75%;
+    }
+
+    .col-sma-10 {
+        width: 83.333333%;
+    }
+
+    .col-sma-11 {
+        width: 91.666667%;
+    }
+
+    .col-sma-12 {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .content-row {
+        padding: 25px 0 25px 0;
+    }
+
+        .content-row:first-of-type {
+            padding-top: 0;
+        }
+
+        .content-row:last-of-type {
+            padding-bottom: 0;
+        }
+
+    .col-lar-1, .col-lar-2, .col-lar-3, .col-lar-4, .col-lar-5, .col-lar-6, .col-lar-7, .col-lar-8, .col-lar-9, .col-lar-10, .col-lar-11, .col-lar-12 {
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .col-lar-1 {
+        width: 8.333333%;
+    }
+
+    .col-lar-2 {
+        width: 16.666667%;
+    }
+
+    .col-lar-3 {
+        width: 25%;
+    }
+
+    .col-lar-4 {
+        width: 33.333333%;
+    }
+
+    .col-lar-5 {
+        width: 41.666667%;
+    }
+
+    .col-lar-6 {
+        width: 50%;
+    }
+
+    .col-lar-7 {
+        width: 58.33333%;
+    }
+
+    .col-lar-8 {
+        width: 66.666667%;
+    }
+
+    .col-lar-9 {
+        width: 75%;
+    }
+
+    .col-lar-10 {
+        width: 83.333333%;
+    }
+
+    .col-lar-11 {
+        width: 91.666667%;
+    }
+
+    .col-lar-12 {
+        width: 100%;
+    }
+}
+
+/***########## General Styling and Typography settings. ***/
+body {
+    background-color: #f3f3f3;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    padding-bottom: 16px;
+    line-height: 22.4px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    font-size: 0px;
+}
+/*Don't allow images to go offscreen horizontally */
+a:link, a:visited {
+    color: #000000;
+}
+
+a:hover {
+    color: #0000cc;
+}
+
+.body-wrapper {
+    position: relative;
+    width: 100%;
+    min-width: 300px;
+    padding: 0;
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+}
+
+@media only screen and (min-width: 500px) {
+}
+
+@media only screen and (min-width: 700px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+}
+
+/***########## General layout settings and general classes. ***/
+.justify-content > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* General Resuable Classes */
+.sr-only {
+    display: block;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.width-100-percent {
+    width: 100%;
+}
+
+.clear-both {
+    clear: both;
+}
+
+/* Use .inner-wrapper for layouts where you want to have backgrounds go out of the site 'border' provided by .body-wrapper '*/
+.inner-wrapper {
+    position: relative;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (min-width: 700px) {
+    .float-right-above-a-breakpoint {
+        float: right;
+    }
+}
+
+/* Form Validation classes */
+.javascript-validation-results-contact-us {
+    display: none;
+    font-weight: bold;
+}
+
+    .javascript-validation-results-contact-us.show {
+        display: block;
+    }
+
+.required-field-needed {
+    box-shadow: 0px 0px 3px 3px rgba(204, 0, 0, 1);
+}
+/***########## End of General Styling Reset and Setup ****/
+
+
+
+
+
+/***############### Beginning of Website-specific style sheet. ****/
+
+/*
+    Complimentary Color Scheme.
+
+    Color 1: red                  #ee3311      (238, 51, 17)
+    Color 2: cobalt-blue          #107495      (16, 116, 149)
+    Color 3: green-yellow         #85da10      (133, 218, 16)
+
+    Color 4: darker red           #ba2206      (186, 34, 6)     (darker by 1 mark than Color 1)
+    Color 5: light green-yellow   #d6f6a9             (much brighter 2 marks and 20% bright than Color 3)
+*/
+
+
+a {
+    color: #000099;
+}
+
+h2, h3, h4 {
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 28px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 24px;
+    padding-bottom: 15px;
+    color: #107495;
+}
+
+h4 {
+    color: #ee3311;
+}
+
+input, textarea {
+    padding: 10px 15px;
+    color: #ee3311;
+    transition: box-shadow 0.5s;
+}
+
+    input:focus, textarea:focus {
+        box-shadow: 0 0 4px 6px rgba(16, 116, 149, 0.8);
+        transition: box-shadow 0.5s;
+    }
+
+/*General classes*/
+.form {
+}
+
+.form__input-container {
+    padding: 10px;
+}
+
+    .form__input-container:last-of-type {
+        padding-bottom: 0;
+    }
+
+.form__label {
+    display: inline-block;
+    float: left;
+    width: 100%;
+    padding-bottom: 6px;
+}
+
+.form__input {
+    display: inline-block;
+    float: left;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.form__textarea {
+    min-height: 100px;
+}
+
+.form__submit-button {
+    border-radius: 15px;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+
+    .form__submit-button:hover {
+        background-color: #dddddd;
+        box-shadow: 0 0 4px 6px rgba(16, 116, 149, 0.8);
+        transition: 0.5s ease-in;
+    }
+
+
+body {
+    background-color: rgba(250, 240, 230, 1);
+}
+
+.body-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+
+.header {
+    min-height: 240px;
+}
+
+.header__background {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 240px;
+    background: url('/assets/images/restaurant-interior-wood-tables-windows.jpeg') 50% 30%/cover no-repeat;
+}
+
+
+
+.main-title-container {
+    position: absolute;
+    top: 120px;
+    left: auto;
+    right: 25px;
+    width: 204px;
+    border: 2px solid #e9e9e9;
+    border-radius: 15px;
+    background-color: rgba(16, 116, 149, 0.75);
+    text-align: center;
+    transition: 0.5s;
+}
+
+    .main-title-container:hover {
+        background-color: rgba(16, 116, 149, 0.4);
+        transition: 0.5s;
+    }
+
+    .main-title-container .main-title__title, .main-title-container .main-title__word-two {
+        font-size: 32px;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        color: #ee3311;
+        text-shadow: 0.8px 1.2px #ffffff;
+    }
+
+    .main-title-container .main-title__word-two {
+        color: #85da10;
+        text-shadow: 0.8px 1.2px #222222;
+    }
+
+.main-title__title {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+
+
+
+
+.logo-container {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+
+.subtitle-container {
+}
+
+.subtitle-container__subtitle {
+    font-family: 'Lato', sans-serif;
+    color: #ee3311;
+}
+
+
+
+
+
+
+.nav {
+    position: relative;
+}
+
+    .nav .nav__nav-list-container .current-page {
+        text-decoration: underline;
+    }
+
+.mobile-nav {
+    display: block;
+}
+
+.desktop-nav {
+    display: none;
+}
+
+
+
+.nav__nav-list-container {
+    position: static;
+    padding: 20px 15px;
+    z-index: 11;
+    background-color: rgba(16, 116, 149, 1);
+}
+
+.nav__nav-list {
+    padding-left: 0px;
+}
+
+
+.nav__nav-item {
+    display: inline-block;
+    padding-right: 0px;
+}
+
+.nav__nav-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 25px;
+}
+
+    .nav__nav-row:last-of-type {
+        padding-bottom: 0;
+    }
+
+.nav .nav__nav-link {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+    .nav .nav__nav-link:hover {
+        text-decoration: underline;
+        color: #85da10;
+    }
+
+.nav .nav__nav-item:last-of-type {
+    padding-bottom: 0;
+}
+
+.content {
+    padding: 15px 10px;
+}
+
+.footer {
+    padding: 50px 10px;
+    background-color: #107495;
+}
+
+.footer__copyright, .footer__locations, .footer__phone {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+.footer__copyright {
+    padding-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer__locations {
+    padding-bottom: 20px;
+    color: #85da10;
+}
+
+.footer__phone {
+    padding-bottom: 50px;
+    color: #ffffff;
+}
+
+
+.footer__social {
+    width: 148px;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer__social-item {
+    display: inline-block;
+    padding-right: 30px;
+}
+
+    .footer__social-item:last-of-type {
+        padding-right: 0;
+    }
+
+    .footer__social-item a {
+        color: #85da10;
+        transition: 0.5s ease-in;
+    }
+
+        .footer__social-item a:hover {
+            color: #f9f9f9;
+            transition: 0.5s ease-in;
+        }
+
+.footer__general-phrase {
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+
+.footer__hours {
+    padding-bottom: 0px;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+
+
+.footer__subscribe {
+    padding-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #85da10;
+}
+
+.footer__subscribe-subheader {
+    text-align: center;
+    color: #85da10;
+}
+
+.subscribe__label {
+    padding-top: 10px;
+    color: #85da10;
+}
+
+.footer__subscribe-button {
+    display: block;
+    padding: 10px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    font-weight: bold;
+    background-color: #ffffff;
+    color: #ee3311;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+
+    .footer__subscribe-button:hover {
+        background-color: #cccccc;
+        transition: 0.5s ease-in;
+    }
+
+
+/*General use styles*/
+
+.content__subheader {
+    text-align: center;
+}
+
+.background-hero-image {
+    width: 100%;
+    min-height: 240px;
+    margin-bottom: 40px;
+}
+
+.location__name, .food-item__title {
+    font-size: 18px;
+}
+
+
+
+.menu-item {
+    margin-bottom: 40px;
+}
+
+.food-items .menu-item.nine {
+    margin-bottom: 0;
+}
+
+.beverage-items .menu-item.six {
+    margin-bottom: 0;
+}
+
+
+.menu-item__title {
+    padding-bottom: 15px;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+    color: #ee3311;
+}
+
+.menu-item__background {
+    height: 250px;
+    margin-bottom: 15px;
+    background-color: #dddddd;
+}
+
+.menu-item__description p {
+    padding-bottom: 0;
+}
+
+
+
+
+.supporting-container {
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.learn-more {
+    width: 152px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    background-color: #ee3311;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+    .learn-more .learn-more__link {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding: 12px 15px;
+        border-radius: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #ffffff;
+        transition: 0.5s;
+    }
+
+    .learn-more:hover {
+        background-color: #ba2206;
+        transition: 0.5s;
+    }
+
+        .learn-more:hover .learn-more__link {
+            color: #dddddd;
+            transition: 0.5s;
+        }
+
+.form-response, .subscribe-form-response {
+    padding-bottom: 15px;
+}
+
+.javascript-validation-results-contact-us {
+    padding-bottom: 15px;
+}
+
+
+/*Index*/
+.background-hero-image.index {
+    background: url('/assets/images/sandwich-on-table.jpg') 50% 30%/cover no-repeat;
+}
+
+.background-hero-image.index-two {
+    background: url('/assets/images/beverages/strawberry-smoothie.jpg') 50% 30%/cover no-repeat;
+}
+
+.background-hero-image.index-three {
+    background: url('/assets/images/cow.jpg') 50% 30%/cover no-repeat;
+    margin-bottom: 15px;
+}
+
+.learn-more.smoothie {
+    width: 225px;
+    margin-bottom: 15px;
+}
+
+.slideshow {
+    position: static;
+    width: 100%;
+    max-width: 658px;
+    height: 100%;
+    padding-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+}
+
+.slideshow__image {
+    min-height: 200px;
+    padding-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slideshow__header {
+    padding: 15px 10px;
+    border-radius: 15px 5px 0 0;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #107495;
+    color: #ffffff;
+}
+
+.slideshow__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0 0 15px 15px;
+    background-color: #107495;
+}
+
+.slideshow__slide-button {
+    display: block;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 12px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .slideshow__slide-button:hover {
+        box-shadow: 0px 0px 5px 5px #85da10;
+        transition: 0.2s;
+    }
+
+.slideshow__button-text {
+    margin-top: 14px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #ee3311;
+}
+
+#pausePlayButton {
+    background: url(../images/pause-button.png);
+    border-radius: 5px;
+}
+
+#slideButton3 {
+    margin-bottom: 10px;
+}
+
+
+
+
+/*About Us*/
+.background-hero-image.about-us {
+    background: url('/assets/images/shop-goods-counter.jpg') 50% 30%/cover no-repeat;
+}
+
+
+.headquarters-bg {
+    height: 250px;
+    background: url('/assets/images/sw-portland-cityscape.jpg') 50% 30%/cover no-repeat;
+}
+
+
+.locations {
+}
+
+.location {
+    padding-bottom: 50px;
+}
+
+    .location.four {
+        padding-bottom: 0;
+    }
+
+.location__background {
+    height: 240px;
+    margin-bottom: 15px;
+    background-color: #dddddd;
+    background: url('/assets/images/sandwich-on-table.jpg') 50% 30%/cover no-repeat;
+}
+
+.location__name {
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: center;
+    color: #ee3311;
+}
+
+
+/*Food*/
+.background-hero-image.food {
+    background: url('/assets/images/hearty-fancy-cheese-sandwich.jpg') 50% 30%/cover no-repeat;
+}
+
+.food-items .menu-item.one .menu-item__background {
+    background: url('/assets/images/food/fancy-egg-sandwich.jpg') 50% 30%/cover no-repeat;
+}
+
+.food-items .menu-item.two .menu-item__background {
+    background: url('/assets/images/food/bagel-sandwich-spinach-side.jpg') 50% 30%/cover no-repeat;
+}
+
+.food-items .menu-item.three .menu-item__background {
+    background: url('/assets/images/food/diced-veggies-on-bread.jpg') 50% 30%/cover no-repeat;
+}
+
+.food-items .menu-item.four .menu-item__background {
+    background: url('/assets/images/food/bacon-and-egg-sandwich.jpg') 50% 30%/cover no-repeat;
+}
+
+.food-items .menu-item.five .menu-item__background {
+    background: url('/assets/images/food/mushroom-tomato-sandwich.jpg') 50% 30%/cover no-repeat;
+}
+
+.food-items .menu-item.six .menu-item__background {
+    background: url('/assets/images/food/peanut-butter-and-jelly-sandwich.jpg') 50% 30%/cover no-repeat;
+}
+
+.food-items .menu-item.seven .menu-item__background {
+    background: url('/assets/images/food/grilled-cheese-sandwich-outside-in-sun.jpg') 50% 30%/cover no-repeat;
+}
+
+.food-items .menu-item.eight .menu-item__background {
+    background: url('/assets/images/food/ham-sandwich-white-background.jpg') 50% 30%/cover no-repeat;
+}
+
+.food-items .menu-item.nine .menu-item__background {
+    background: url('/assets/images/food/thick-cheese-sandwich.jpg') 50% 30%/cover no-repeat;
+}
+
+
+
+/*Beverages*/
+.background-hero-image.beverages {
+    background: url('/assets/images/green-smoothie.jpg') 50% 30%/cover no-repeat;
+}
+
+
+.beverage-items .menu-item.one .menu-item__background {
+    background: url('/assets/images/beverages/strawberry-smoothie.jpg') 50% 30%/cover no-repeat;
+}
+
+.beverage-items .menu-item.two .menu-item__background {
+    background: url('/assets/images/beverages/green-smoothie.jpg') 50% 30%/cover no-repeat;
+}
+
+.beverage-items .menu-item.three .menu-item__background {
+    background: url('/assets/images/beverages/green-smoothie-with-spinach.jpg') 50% 30%/cover no-repeat;
+}
+
+.beverage-items .menu-item.four .menu-item__background {
+    background: url('/assets/images/beverages/milk-in-a-glass.jpg') 50% 30%/cover no-repeat;
+}
+
+.beverage-items .menu-item.five .menu-item__background {
+    background: url('/assets/images/beverages/soda-in-a-glass.jpg') 50% 30%/cover no-repeat;
+}
+
+.beverage-items .menu-item.six .menu-item__background {
+    background: url('/assets/images/beverages/berry-milkshake.jpg') 50% 30%/cover no-repeat;
+}
+
+
+
+/*Events page*/
+.background-hero-image.events {
+    background: url('/assets/images/kiwi-orange-raspberry-smoothies-outside.jpg') 50% 30%/cover no-repeat;
+}
+
+
+
+
+.event {
+    margin-bottom: 30px;
+}
+
+.events-container .event.five {
+    margin-bottom: 0;
+}
+
+
+.event p {
+    padding-bottom: 0;
+}
+
+.event__inner-container {
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #dddddd;
+}
+
+.event__title {
+    margin-bottom: 10px;
+    color: #ee3311;
+}
+
+.event__background {
+    height: 160px;
+    margin-bottom: 15px;
+    background: url('/assets/images/veggies-and-pasta-shells-on-wood-table.jpg') 50% 90%/cover no-repeat;
+}
+
+
+/*Contact page*/
+.background-hero-image.contact-us {
+    margin-bottom: 0;
+    background: url('/assets/images/red-chairs-outside-near-a-small-table.jpg') 50% 30%/cover no-repeat;
+}
+
+.contact-form {
+    padding: 12px 10px;
+    margin-bottom: 20px;
+    background-color: #ee3311;
+    border-radius: 10px;
+}
+
+    .contact-form .form__required {
+        color: #ffffff;
+    }
+
+    .contact-form .form__label {
+        color: #ffffff;
+    }
+/*404 page*/
+.background-hero-image.error-404 {
+    margin-bottom: 0;
+    background: url('/assets/images/red-chairs-outside-near-a-small-table.jpg') 50% 30%/cover no-repeat;
+}
+/*500 page*/
+.background-hero-image.error-500 {
+    margin-bottom: 0;
+    background: url('/assets/images/red-chairs-outside-near-a-small-table.jpg') 50% 30%/cover no-repeat;
+}
+
+
+
+
+/* Clearing variable width columns */
+@media only screen and (min-width: 700px) and (max-width: 1199px) {
+    .location:nth-of-type(3n+1), .menu-item:nth-of-type(2n+1), .event:nth-of-type(2n+1) {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .location:nth-of-type(6n+1), .menu-item:nth-of-type(3n+1), .event:nth-of-type(3n+1) {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+
+
+
+@media only screen and (min-width: 500px) {
+    .main-title-container {
+        right: 15%;
+    }
+}
+
+
+
+@media only screen and (min-width: 700px) {
+
+    h2 {
+        text-align: left;
+    }
+
+    .main-title-container {
+    }
+
+    .nav__nav-list {
+        padding-left: 30px;
+    }
+
+    .nav__nav-row {
+        display: inline-block;
+        padding-bottom: 0;
+    }
+
+    .nav__nav-item {
+        padding-right: 30px;
+    }
+
+    .footer__general-phrase {
+        padding-bottom: 0;
+    }
+
+    .footer__social {
+        padding-bottom: 0;
+    }
+
+    .footer__hours {
+        padding-bottom: 0;
+    }
+
+
+    /*General use styles*/
+    .background-hero-image {
+        margin-bottom: 0;
+    }
+
+    .form {
+        margin-bottom: 0;
+    }
+
+    .learn-more {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+
+
+    /*Index*/
+    .background-hero-image.index-three {
+        margin-bottom: 0;
+    }
+
+    .slideshow__image {
+        min-height: 240px;
+    }
+
+    /*About*/
+    .location__background {
+        height: 150px;
+    }
+
+
+    /*Beverages*/
+    .beverage-items .menu-item.five, .beverage-items .menu-item.six {
+        margin-bottom: 0;
+    }
+
+    /*Contact Us*/
+    .contact-form {
+        margin-bottom: 0px;
+    }
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+
+    .body-wrapper {
+        width: 1200px;
+    }
+
+
+
+    .header {
+        min-height: 400px;
+    }
+
+    .header__background {
+        min-height: 400px;
+    }
+
+    .main-title-container {
+        position: absolute;
+        top: 215px;
+        left: 700px;
+        right: 0;
+        width: 329px;
+    }
+
+        .main-title-container .main-title__title, .main-title-container .main-title__word-two {
+            font-size: 56px;
+        }
+
+
+    .logo-container {
+        position: absolute;
+        top: 180px;
+        left: 40px;
+        width: 120px;
+        height: 120px;
+    }
+
+
+
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .desktop-nav {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 50px;
+    }
+
+
+
+
+    .nav__nav-list-container {
+        position: absolute;
+        top: 0;
+        width: 621px;
+        padding: 20px 15px;
+        border-radius: 20px;
+        background-color: rgba(16, 116, 149, 0.75);
+    }
+
+    .nav__nav-list {
+        padding-left: 15px;
+    }
+
+
+
+    .nav__nav-item {
+        display: inline-block;
+        padding-bottom: 0;
+        padding-right: 30px;
+    }
+
+        .nav__nav-item:last-of-type {
+            padding-right: 0;
+        }
+
+    .footer__copyright {
+        width: 50%;
+    }
+
+    .footer__locations {
+        width: 80%;
+    }
+
+    .footer__phone {
+        width: 50%;
+    }
+
+    .footer__subscribe {
+        width: 310px;
+    }
+
+
+
+    /*General use styles*/
+    .background-hero-image {
+        width: 100%;
+        min-height: 380px;
+    }
+
+    .location__name, .food-item__title {
+        font-size: 22px;
+    }
+
+    .supporting-container {
+        padding-bottom: 0px;
+    }
+
+    .menu-item__title {
+        font-size: 22px;
+    }
+
+
+
+    .form__input-container {
+        padding: 15px;
+    }
+
+    .form__label {
+        width: 33%;
+        padding-bottom: 0;
+    }
+
+    .form__input {
+        width: 67%;
+    }
+
+
+
+    /* Index page */
+    .slideshow {
+        position: relative;
+        width: 658px;
+        height: 100%;
+        margin-left: auto;
+        margin-right: 0px;
+    }
+
+    .slideshow__image {
+        position: relative;
+        padding-bottom: 56.25%;
+        background: 0 bottom no-repeat;
+        background-size: 100%;
+    }
+
+    .slideshow__header {
+        font-size: 26px;
+    }
+
+
+
+    /*About Us*/
+    .location.one, .location.two, .location.three, .location.four {
+        padding-bottom: 0;
+    }
+
+    .location__name {
+        text-align: left;
+    }
+
+
+    /*Food*/
+    .food-items .menu-item.seven, .food-items .menu-item.eight, .food-items .menu-item.nine {
+        margin-bottom: 0;
+    }
+
+    /*Beverages*/
+    .beverage-items .menu-item.four, .beverage-items .menu-item.five, .beverage-items .menu-item.six {
+        margin-bottom: 0;
+    }
+
+    /*Events*/
+    .events-container .event.four, .events-container .event.five {
+        margin-bottom: 0;
+    }
+
+    /*Contact Us*/
+    .contact-form .form__label {
+        width: 38%;
+    }
+
+    .contact-form .form__input {
+        width: 62%;
+    }
+}

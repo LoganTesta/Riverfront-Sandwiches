@@ -1,0 +1,100 @@
+﻿@page
+@model SandwichShop.Pages.EventsModel
+@{
+    ViewData["Title"] = "Events";
+}
+
+<div class="content-row">
+
+
+    <div class="col-sma-6">
+        <div class="subtitle-container">
+            <h2 class="subtitle-container__subtitle">@ViewData["Title"]</h2>
+        </div>
+        <p>Check back often, we frequently have sandwich discount events and invite local chefs in to demo their favorite sandwich tricks.</p>
+    </div>
+
+
+
+    <div class="col-sma-6">
+        <div class="background-hero-image events">
+
+        </div>
+    </div>
+</div>
+<div class="content-row">
+    <div class="col-sma-12">
+        <div class="events-container">
+            <div class="content-row">
+                <h3 class="content__subheader">Recent and Upcoming Events</h3>
+                <div class="event one col-sma-6 col-lar-4">
+                    <div class="event__inner-container">
+                        <div class="event__title">
+                            <h4>Sandwich Making Contest</h4>
+                        </div>
+                        <div class="event__background">
+                        </div>
+                        <div class="event__description">
+                            <p>Sandwich making contest in all stores, 12-2pm, May 10, 2019.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="event two col-sma-6 col-lar-4">
+                    <div class="event__inner-container">
+                        <div class="event__title">
+                            <h4>Half Off Sandwich Day</h4>
+                        </div>
+                        <div class="event__background">
+                        </div>
+                        <div class="event__description">
+                            <p>First Thursday every month.  All bagels/sandwiches are 50% off.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="event three col-sma-6 col-lar-4">
+                    <div class="event__inner-container">
+                        <div class="event__title">
+                            <h4>Sandwich Making Contest</h4>
+                        </div>
+                        <div class="event__background">
+                        </div>
+                        <div class="event__description">
+                            <p>Sandwich making contest in all stores, 12-2pm, August 15, 2019.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="event four col-sma-6 col-lar-4">
+                    <div class="event__inner-container">
+                        <div class="event__title">
+                            <h4>Special Sandwich Hacks with Local Chef!</h4>
+                        </div>
+                        <div class="event__background">
+                        </div>
+                        <div class="event__description">
+                            <p>Downtown Portland, 12-2pm, August 28, 2019.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="event five col-sma-6 col-lar-4">
+                    <div class="event__inner-container">
+                        <div class="event__title">
+                            <h4>Sandwich Making Contest</h4>
+                        </div>
+                        <div class="event__background">
+                        </div>
+                        <div class="event__description">
+                            <p>Sandwich making contest in all stores, 12-2pm, October 10, 2019.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        setCurrentPage(3, "mobileNav");
+        setCurrentPage(4, "desktopNav");
+    });
+</script>

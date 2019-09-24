@@ -1,0 +1,97 @@
+﻿@page
+@model SandwichShop.Pages.FoodModel
+@{
+    ViewData["Title"] = "Food";
+}
+
+
+<div class="content-row">
+    <div class="col-sma-6">
+        <div class="subtitle-container">
+            <h2 class="subtitle-container__subtitle">@ViewData["Title"]</h2>
+        </div>
+        <div>
+            <p>Peruse our tasty sandwiches.  Made fresh daily in-house!</p>
+            <p>
+                All sawnwhiches can be made in either regular size "square" bread, 6" baguette-style, or 12"
+                baguette style.
+            </p>
+            <p>
+                For square bread, we serve your choice of whole wheat, whole-wheat and white, white bread, rye,
+                oat/wheat blend, and more.
+            </p>
+            <p>Baguettes: white, blended, or whole wheat.</p>
+            <p>While supplies lasts.</p>
+            <p>Prices vary depending on sandwich type.</p>
+            <p>
+                We will gladly custom make your sandwich
+                the way you like it, just let us know when ordering!  -Thanks from the team!
+            </p>
+        </div>
+    </div>
+    <div class="col-sma-6">
+        <div class="background-hero-image food">
+
+        </div>
+    </div>
+</div>
+
+<div class="content-row food-items">
+    <h3 class="content__subheader">Menu Items</h3>
+    <div class="menu-item one col-sma-6 col-lar-4">
+        <div class="menu-item__title">Egg Sandwich</div>
+        <div class="menu-item__background"></div>
+        <div class="menu-item__description"><p>Eggs, veggies, ham/bacon, avocado, and more.</p></div>
+    </div>
+    <div class="menu-item two col-sma-6 col-lar-4">
+        <div class="menu-item__title">Bagel or Bagel Sandwich</div>
+        <div class="menu-item__background"></div>
+        <div class="menu-item__description"><p>Your choice of butter or cream cheese, or your choice of sandwich
+             fillings.</p></div>
+    </div>
+    <div class="menu-item three col-sma-6 col-lar-4">
+        <div class="menu-item__title">Veggie Sandwich</div>
+        <div class="menu-item__background"></div>
+        <div class="menu-item__description"><p>Freshly sliced veggies, cheese, and more.</p></div>
+    </div>
+    <div class="menu-item four col-sma-6 col-lar-4">
+        <div class="menu-item__title">Bacon and Egg Sandwich</div>
+        <div class="menu-item__background"></div>
+        <div class="menu-item__description"><p>It's time for some Bacon and eggs in a sandwich!</p></div>
+    </div>
+    <div class="menu-item five col-sma-6 col-lar-4">
+        <div class="menu-item__title">Mushroom Tomato Sandwich</div>
+        <div class="menu-item__background"></div>
+        <div class="menu-item__description"><p>Mushrooms, tomatos, and more veggies.</p></div>
+    </div>
+    <div class="menu-item six col-sma-6 col-lar-4">
+        <div class="menu-item__title">Peanut Butter and Jelly Sandwich</div>
+        <div class="menu-item__background"></div>
+        <div class="menu-item__description"><p>Our take on a simple classic.</p></div>
+    </div>
+    <div class="menu-item seven col-sma-6 col-lar-4">
+        <div class="menu-item__title">Grilled Cheese</div>
+        <div class="menu-item__background"></div>
+        <div class="menu-item__description"><p>Freshly grilled, custom to your liking.  A customer favorite!</p></div>
+    </div>
+    <div class="menu-item eight col-sma-6 col-lar-4">
+        <div class="menu-item__title">Ham Sandwich</div>
+        <div class="menu-item__background"></div>
+        <div class="menu-item__description"><p>Our take on a classic sandwich!</p></div>
+    </div>
+    <div class="menu-item nine col-sma-6 col-lar-4">
+        <div class="menu-item__title">Delux Cheese Sandwich</div>
+        <div class="menu-item__background"></div>
+        <div class="menu-item__description">
+            <p>Stuffed with 3 tasty cheeses, lettuce, and whatever else you want
+            to add it!</p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        setCurrentPage(1, "mobileNav");
+        setCurrentPage(2, "desktopNav");
+    });
+</script>

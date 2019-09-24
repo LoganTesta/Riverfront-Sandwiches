@@ -1,0 +1,74 @@
+﻿@page
+@model SandwichShop.Pages.BeveragesModel
+@{
+    ViewData["Title"] = "Beverages";
+}
+
+<div class="content-row">
+    <div class="col-sma-6">
+        <div class="subtitle-container">
+            <h2 class="subtitle-container__subtitle">@ViewData["Title"]</h2>
+        </div>
+        <p>We sell everything from sodas, smoothies, and milk.</p>
+        <p>We will gladly customize your smoothie, just let us know!</p>
+    </div>
+    <div class="col-sma-6">
+        <div class="background-hero-image beverages">
+        </div>
+    </div>
+</div>
+
+<div class="content-row beverage-items">
+    <h3 class="content__subheader">Smoothies and More</h3>
+    <div class="menu-item one col-sma-6 col-lar-4">
+        <div class="menu-item__title">Strawberry Smoothie</div>
+        <div class="menu-item__background"></div>
+        <div class="menu-item__description"><p>Our take on a classic and favorite smoothie everyone loves!</p></div>
+    </div>
+    <div class="menu-item two col-sma-6 col-lar-4">
+        <div class="menu-item__title">Green Fruit and Veggie Smoothie</div>
+        <div class="menu-item__background"></div>
+        <div class="menu-item__description">
+            <p>A great dose of antioxidants, our mildy sweet fruit and veggie
+            smoothie is hand-crafted from sevearl fruits and veggies, including green apples, celery, spinach,
+            kale, and more.</p>
+        </div>
+    </div>
+    <div class="menu-item three col-sma-6 col-lar-4">
+        <div class="menu-item__title">Green Spinach Smoothie</div>
+        <div class="menu-item__background"></div>
+        <div class="menu-item__description">
+            <p>The non fruit-sweetened green smootie option.  Make your folks proud and (drink) your veggies!</p>
+        </div>
+    </div>
+    <div class="menu-item four col-sma-6 col-lar-4">
+        <div class="menu-item__title">Milk in a Glass</div>
+        <div class="menu-item__background"></div>
+        <div class="menu-item__description">
+            <p>Sometimes a good old glass of milk is exacly what you
+            want to pair with lunch or dinner.  We also serve almond, soy, and rice milk.</p>
+        </div>
+    </div>
+    <div class="menu-item five col-sma-6 col-lar-4">
+        <div class="menu-item__title">Soda</div>
+        <div class="menu-item__background"></div>
+        <div class="menu-item__description">
+            <p>Your choice of chilled cola with your choice of sandwich.  Very refreshing.</p>
+        </div>
+    </div>
+    <div class="menu-item six col-sma-6 col-lar-4">
+        <div class="menu-item__title">Berry Milkshake</div>
+        <div class="menu-item__background"></div>
+        <div class="menu-item__description">
+            <p>If you like strawberries, blueberries, marionberries, you'll love
+            our blended berry milkshake.  Just saying...</p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        setCurrentPage(2, "mobileNav");
+        setCurrentPage(3, "desktopNav");
+    });
+</script>

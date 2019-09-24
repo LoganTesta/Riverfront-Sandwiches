@@ -1,0 +1,25 @@
+﻿
+@model string
+
+<div class="footer__subscribe">
+    <h3 class="footer__subscribe-subheader">Subscribe For News and Special Coupons Here!</h3>
+    <form id="" class="form" name="footer__subscribe-form" method="post">
+        <div class="form__input-container">
+            <label class="form__label subscribe__label" for="userSubscribeName">Your Name</label>
+            <input class="form__input" type="text" name="userSubscribeName" value="" />
+            <div class="clear-both"></div>
+        </div>
+        <div class="form__input-container">
+            <label class="form__label subscribe__label" for="userSubscribeEmail">Your Email</label>
+            <input class="form__input" type="text" name="userSubscribeEmail" value="" />
+            <div class="clear-both"></div>
+        </div>
+        <div class="form__input-container">
+            <input type="submit" asp-page-handler="SubscribeSection" class="footer__subscribe-button" id="footer__subscribe-button" name="footer__subscribe-button" value="Get Coupons" />
+            <div class="clear-both"></div>
+        </div>
+        <div class="subscribe-form-response">
+            @Model
+        </div>
+    </form>
+</div>
