@@ -22,13 +22,13 @@ namespace SandwichShop.Components
 
         public string Message { get; set; } = "";
         [BindProperty]
-        public string userSubscribeName { get; set; }
+        public string userNameSubscribe { get; set; }
 
 
         public async Task<IViewComponentResult> InvokeAsync() { 
 
-            string userSubscribeName = "";
-            string userSubscribeEmail = "";
+            string userNameSubscribe = "";
+            string userEmailSubscribe = "";
             bool hasException = false;
 
             bool validForm = true;
@@ -36,8 +36,8 @@ namespace SandwichShop.Components
 
             try
             {
-                userSubscribeName = "" + System.Web.HttpUtility.HtmlEncode(Request.Form["userSubscribeName"]);
-                userSubscribeEmail = "" + System.Web.HttpUtility.HtmlEncode(Request.Form["userSubscribeEmail"]);
+                userNameSubscribe = "" + System.Web.HttpUtility.HtmlEncode(Request.Form["userNameSubscribe"]);
+                userEmailSubscribe = "" + System.Web.HttpUtility.HtmlEncode(Request.Form["userEmailSubscribe"]);
             }
             catch (Exception)
             {
@@ -47,7 +47,7 @@ namespace SandwichShop.Components
 
             if (hasException == false)
             {
-                if (userSubscribeName == "" || userSubscribeEmail == "")
+                if (userNameSubscribe == "" || userEmailSubscribe == "")
                 {
                     validForm = false;
                     contactFormResponse += "Sorry, form not valid, please fill in all required (**) input fields. ";
@@ -55,21 +55,21 @@ namespace SandwichShop.Components
 
                 if (validForm)
                 {
-                    if (!userSubscribeEmail.Contains("@"))
+                    if (!userEmailSubscribe.Contains("@"))
                     {
                         validForm = false;
                         contactFormResponse += "Email must contain at least 1 @ symbol. ";
                         //contactFormResponse.Replace("<br/> ", Environment.NewLine);
                     }
 
-                    if (!userSubscribeEmail.Contains("."))
+                    if (!userEmailSubscribe.Contains("."))
                     {
                         validForm = false;
                         contactFormResponse += "Email must contain at least 1 period (.). ";
                     }
 
-                    int atSymbolIndex = userSubscribeEmail.IndexOf("@");
-                    int lastPeriodSymbol = userSubscribeEmail.LastIndexOf(".");
+                    int atSymbolIndex = userEmailSubscribe.IndexOf("@");
+                    int lastPeriodSymbol = userEmailSubscribe.LastIndexOf(".");
 
                     if (!(atSymbolIndex <= lastPeriodSymbol))
                     {
@@ -87,8 +87,8 @@ namespace SandwichShop.Components
                 {
                     contactFormResponse += "Valid input";
                     //Construct the Email
-                    string FromEmail = userSubscribeEmail;
-                    string FromName = userSubscribeName;
+                    string FromEmail = userEmailSubscribe;
+                    string FromName = userNameSubscribe;
                     string ToEmail = "contact@riverfrontsandwiches.com";
                     string EmailSubject = "Please Subscribe me for emails.";
 
@@ -111,7 +111,7 @@ namespace SandwichShop.Components
                         destinationSmtp.Disconnect(true);
                         destinationSmtp.Dispose();
 
-                        contactFormResponse = "Thank you " + userSubscribeName + ", we look forward to reading your comments and our reply will be sent to your email at: " + userSubscribeEmail + ".";
+                        contactFormResponse = "Thank you " + userNameSubscribe + ", we look forward to reading your comments and our reply will be sent to your email at: " + userEmailSubscribe + ".";
                     }
                 }
             }

@@ -3,23 +3,25 @@
 
 <div class="footer__subscribe">
     <h3 class="footer__subscribe-subheader">Subscribe For News and Special Coupons Here!</h3>
-    <form id="" class="form" name="footer__subscribe-form" method="post">
+    <form id="subscribeForm" class="form" name="footer__subscribe-form" onsubmit="return validateSubscribeForm();" method="post">
         <div class="form__input-container">
-            <label class="form__label subscribe__label" for="userSubscribeName">Your Name</label>
-            <input class="form__input" type="text" name="userSubscribeName" value="" />
+            <label class="form__label subscribe__label" for="userNameSubscribe">Your Name</label>
+            <input class="form__input" type="text" id="userNameSubscribe" name="userNameSubscribe" value="" />
             <div class="clear-both"></div>
         </div>
         <div class="form__input-container">
-            <label class="form__label subscribe__label" for="userSubscribeEmail">Your Email</label>
-            <input class="form__input" type="text" name="userSubscribeEmail" value="" />
+            <label class="form__label subscribe__label" for="userEmailSubscribe">Your Email</label>
+            <input class="form__input" type="text" id="userEmailSubscribe" name="userEmailSubscribe" value="" />
             <div class="clear-both"></div>
         </div>
         <div class="form__input-container">
-            <input type="submit" asp-page-handler="SubscribeSection" class="footer__subscribe-button" id="footer__subscribe-button" name="footer__subscribe-button" value="Get Coupons" />
+            <input type="submit" asp-page-handler="SubscribeSection" class="footer__subscribe-button" id="subscribeButton" name="subscribeButton" value="Get Coupons" />
             <div class="clear-both"></div>
         </div>
+        <div class="javascript-validation-results-contact-us"></div>
         <div class="subscribe-form-response">
             @Model
         </div>
     </form>
 </div>
+<script type="text/javascript" src="assets/javascript/subscribe-form-validation.js"></script>
