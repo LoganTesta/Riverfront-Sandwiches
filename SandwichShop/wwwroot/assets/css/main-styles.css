@@ -673,6 +673,11 @@ body {
     color: #85da10;
 }
 
+.footer__subscribe input:focus, .footer__subscribe textarea:focus {
+    box-shadow: 0 0 4px 6px rgba(133, 218, 16, 0.8);
+    transition: box-shadow 0.5s;
+}
+
 .footer__subscribe-button {
     display: block;
     padding: 10px 15px;
@@ -1156,6 +1161,7 @@ body {
         min-height: 240px;
     }
 
+
     /*About*/
     .location__background {
         height: 150px;
@@ -1279,6 +1285,9 @@ body {
         width: 310px;
     }
 
+    .subscribe__label {
+        padding-right: 12px;
+    }
 
 
     /*General use styles*/
