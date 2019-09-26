@@ -1059,11 +1059,17 @@ body {
     .contact-form .form__label {
         color: #ffffff;
     }
-/*404 page*/
-.background-hero-image.error-404 {
-    margin-bottom: 0;
-    background: url('/assets/images/red-chairs-outside-near-a-small-table.jpg') 50% 30%/cover no-repeat;
-}
+
+    .contact-form .required-field-needed {
+        box-shadow: 0px 0px 3px 3px rgba(255, 255, 0, 1);
+    }
+
+    /*404 page*/
+    .background-hero-image.error-404 {
+        margin-bottom: 0;
+        background: url('/assets/images/red-chairs-outside-near-a-small-table.jpg') 50% 30%/cover no-repeat;
+    }
+
 /*500 page*/
 .background-hero-image.error-500 {
     margin-bottom: 0;
