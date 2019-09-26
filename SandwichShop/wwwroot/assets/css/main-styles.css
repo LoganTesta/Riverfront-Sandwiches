@@ -691,14 +691,23 @@ body {
     transition: 0.5s ease-in;
 }
 
-    .footer__subscribe-button:hover {
-        background-color: #cccccc;
-        transition: 0.5s ease-in;
-    }
+.footer__subscribe-button:hover {
+    background-color: #cccccc;
+    transition: 0.5s ease-in;
+}
+
+.javascript-validation-results-subscribe {
+    display: none;
+    font-weight: bold;
+}
+
+.javascript-validation-results-subscribe.show {
+    display: block;
+}
+
 
 
 /*General use styles*/
-
 .content__subheader {
     text-align: center;
 }
@@ -791,7 +800,7 @@ body {
     padding-bottom: 15px;
 }
 
-.javascript-validation-results-contact-us {
+.javascript-validation-results-contact-us, .javascript-validation-results-subscribe {
     padding-bottom: 15px;
 }
 

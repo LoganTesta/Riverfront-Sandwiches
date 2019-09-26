@@ -50,12 +50,12 @@ function validateSubscribeForm() {
 
 
         if (validContactForm === false) {
-            document.getElementsByClassName("javascript-validation-results-contact-us")[0].classList.add("show");
-            document.getElementsByClassName("javascript-validation-results-contact-us")[0].innerHTML = "Please fill all required fields in the correct format.";
+            document.getElementsByClassName("javascript-validation-results-subscribe")[0].classList.add("show");
+            document.getElementsByClassName("javascript-validation-results-subscribe")[0].innerHTML = "Please fill all required fields in the correct format.";
             return false;
         } else if (validContactForm) {
-            document.getElementsByClassName("javascript-validation-results-contact-us")[0].classList.remove("show");
-            document.getElementsByClassName("javascript-validation-results-contact-us")[0].innerHTML = "";
+            document.getElementsByClassName("javascript-validation-results-subscribe")[0].classList.remove("show");
+            document.getElementsByClassName("javascript-validation-results-subscribe")[0].innerHTML = "";
             return true;
         }
     } else {
