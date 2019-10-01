@@ -1,11 +1,11 @@
 /* JavaScript Subscribe Form Validation. */
 var userNameSubscribe;
 var userEmailSubscribe;
-var clickedSubmit = false;
+var clickedSubmitSubscribe = false;
 
 function validateSubscribeForm() {
 
-    if (clickedSubmit) {
+    if (clickedSubmitSubscribe) {
         var userNameSubscribe = document.forms["subscribeForm"]["userNameSubscribe"].value.trim();
         var userEmailSubscribe = document.forms["subscribeForm"]["userEmailSubscribe"].value.trim();
         var validContactForm = true;
@@ -63,15 +63,15 @@ function validateSubscribeForm() {
     }
 }
 
-function setClickedSubmitTrue() {
+function setClickedSubscribeButtonTrue() {
     var elementWithFocus = document.activeElement;
     if (subscribeButton === elementWithFocus) {
-        clickedSubmit = true;
+        clickedSubmitSubscribe = true;
     }
 }
 
 var subscribeButton = document.getElementById("subscribeButton");
-subscribeButton.addEventListener("click", setClickedSubmitTrue, "false");
+subscribeButton.addEventListener("click", setClickedSubscribeButtonTrue, "false");
 subscribeButton.addEventListener("click", validateSubscribeForm, "false");
 
 var userNameSubscribe = document.getElementById("userNameSubscribe");

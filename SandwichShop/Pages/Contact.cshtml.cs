@@ -96,7 +96,6 @@ namespace SandwichShop.Pages
             }
 
 
-
             if (!validForm)
             {
                 contactFormResponse += "";

@@ -59,7 +59,6 @@ namespace SandwichShop.Components
                     {
                         validForm = false;
                         contactFormResponse += "Email must contain at least 1 @ symbol. ";
-                        //contactFormResponse.Replace("<br/> ", Environment.NewLine);
                     }
 
                     if (!userEmailSubscribe.Contains("."))

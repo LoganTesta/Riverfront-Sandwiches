@@ -2,10 +2,10 @@
 var userName;
 var userEmail;
 var userComments;
-var clickedSubmit = false;
+var clickedSubmitContact = false;
 
 function validateContactForm() {
-    if (clickedSubmit) {
+    if (clickedSubmitContact) {
         var userName = document.forms["contactForm"]["userName"].value.trim();
         var userEmail = document.forms["contactForm"]["userEmail"].value.trim();
         var userSubject = document.forms["contactForm"]["userSubject"].value.trim();
@@ -78,15 +78,15 @@ function validateContactForm() {
     }
 }
 
-function setClickedSubmitTrue() {
+function setClickedContactButtonTrue() {
     var elementWithFocus = document.activeElement;
     if (contactButton === elementWithFocus) {
-        clickedSubmit = true;
+        clickedSubmitContact = true;
     }
 }
 
 var contactButton = document.getElementById("contactButton");
-contactButton.addEventListener("click", setClickedSubmitTrue, "false");
+contactButton.addEventListener("click", setClickedContactButtonTrue, "false");
 contactButton.addEventListener("click", validateContactForm, "false");
 
 var userName = document.getElementById("userName");
