@@ -46,7 +46,6 @@ namespace SandwichShop.Pages
             }
 
 
-
             if (userNameContact == "" || userEmailContact == "" || userCommentsContact == "")
             {
                 validForm = false;

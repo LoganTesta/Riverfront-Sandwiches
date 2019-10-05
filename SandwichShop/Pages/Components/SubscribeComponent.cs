@@ -42,8 +42,9 @@ namespace SandwichShop.Components
             catch (Exception)
             {
                 hasException = true;
-                Message = " ";
+                Message = "";
             }
+
 
             if (hasException == false)
             {
