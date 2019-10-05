@@ -105,10 +105,6 @@ function runSlideShow() {
             slideButton2.style.opacity = 0.40;
             slideButton3.style.opacity = 1.0;
         }
-        slideButton0 = document.getElementById("slideButton0");
-        slideButton1 = document.getElementById("slideButton1");
-        slideButton2 = document.getElementById("slideButton2");
-        slideButton3 = document.getElementById("slideButton3");
         slideshowCounter++;
     }
 }
