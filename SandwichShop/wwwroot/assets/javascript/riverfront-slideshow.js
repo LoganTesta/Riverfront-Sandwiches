@@ -1,24 +1,24 @@
 /*Start of Slideshow */
-var currentSlide;
-var slideshowCounter = 0;
-var paused = false;
-var currentSlideNumber = 0;
-var maxSlideNumber = 3;
-var pausePlayButton;
-var slideshowHeader;
-var slide0 = new Image(600, 400);
+let currentSlide;
+let slideshowCounter = 0;
+let paused = false;
+let currentSlideNumber = 0;
+const maxSlideNumber = 3;
+let pausePlayButton;
+let slideshowHeader;
+let slide0 = new Image(600, 400);
 slide0.src = "../assets/images/food/grilled-cheese-sandwich-outside-in-sun.jpg";
-var slide1 = new Image(600, 400);
+let slide1 = new Image(600, 400);
 slide1.src = "../assets/images/beverages/strawberry-smoothie.jpg";
-var slide2 = new Image(600, 400);
+let slide2 = new Image(600, 400);
 slide2.src = "../assets/images/food/ham-sandwich-white-background.jpg";
-var slide3 = new Image(600, 400);
+let slide3 = new Image(600, 400);
 slide3.src = "../assets/images/beverages/green-smoothie.jpg";
 
-var slideButton0 = document.getElementById('slideButton0');
-var slideButton1 = document.getElementById('slideButton1');
-var slideButton2 = document.getElementById('slideButton2');
-var slideButton3 = document.getElementById('slideButton3');
+let slideButton0 = document.getElementById('slideButton0');
+let slideButton1 = document.getElementById('slideButton1');
+let slideButton2 = document.getElementById('slideButton2');
+let slideButton3 = document.getElementById('slideButton3');
 slideButton0.addEventListener('click', function () {
     setSlide(0);
 }, false);
@@ -112,7 +112,8 @@ function runSlideShow() {
 function togglePausePlay() {
     paused = !paused;
 }
-var pausePlay = document.getElementById("pausePlayButton");
+
+let pausePlay = document.getElementById("pausePlayButton");
 pausePlay.addEventListener("click", togglePausePlay, false);
 
 function setSlide(slideNumber) {

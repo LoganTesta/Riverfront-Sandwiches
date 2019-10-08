@@ -1,20 +1,20 @@
 /* JavaScript Subscribe Form Validation. */
-var userNameSubscribe;
-var userEmailSubscribe;
-var clickedSubmitSubscribe = false;
+
+let clickedSubmitSubscribe = false;
+
 
 function validateSubscribeForm() {
 
     if (clickedSubmitSubscribe) {
-        var userNameSubscribe = document.forms["subscribeForm"]["userNameSubscribe"].value.trim();
-        var userEmailSubscribe = document.forms["subscribeForm"]["userEmailSubscribe"].value.trim();
-        var validContactForm = true;
+        let userNameSubscribe = document.forms["subscribeForm"]["userNameSubscribe"].value.trim();
+        let userEmailSubscribe = document.forms["subscribeForm"]["userEmailSubscribe"].value.trim();
+        let validContactForm = true;
 
-        var atPosition = userEmailSubscribe.indexOf("@");
-        var dotPosition = userEmailSubscribe.lastIndexOf(".");
-        var lastEmailCharacter = userEmailSubscribe.length - 1;
+        let atPosition = userEmailSubscribe.indexOf("@");
+        let dotPosition = userEmailSubscribe.lastIndexOf(".");
+        let lastEmailCharacter = userEmailSubscribe.length - 1;
 
-        var validName = true;
+        let validName = true;
         if (userNameSubscribe === null || userNameSubscribe === "") {
             validName = false;
         }
@@ -30,7 +30,7 @@ function validateSubscribeForm() {
         /*If the @ position is at the start (or less) position of value 0,  validContactForm=false. */
         /* There must be at least 1 character after the @ position and the last dot position. */
         /* There must be at least two characters after the last "." symbol.  */
-        var validEmail = true;
+        let validEmail = true;
         if (userEmailSubscribe === null || userEmailSubscribe === "") {
             validEmail = false;
         } else if (atPosition <= 0) {
@@ -64,18 +64,18 @@ function validateSubscribeForm() {
 }
 
 function setClickedSubscribeButtonTrue() {
-    var elementWithFocus = document.activeElement;
+    let elementWithFocus = document.activeElement;
     if (subscribeButton === elementWithFocus) {
         clickedSubmitSubscribe = true;
     }
 }
 
-var subscribeButton = document.getElementById("subscribeButton");
+let subscribeButton = document.getElementById("subscribeButton");
 subscribeButton.addEventListener("click", setClickedSubscribeButtonTrue, "false");
 subscribeButton.addEventListener("click", validateSubscribeForm, "false");
 
-var userNameSubscribe = document.getElementById("userNameSubscribe");
+let userNameSubscribe = document.getElementById("userNameSubscribe");
 userNameSubscribe.addEventListener("change", validateSubscribeForm, "false");
 
-var userEmailSubscribe = document.getElementById("userEmailSubscribe");
+let userEmailSubscribe = document.getElementById("userEmailSubscribe");
 userEmailSubscribe.addEventListener("change", validateSubscribeForm, "false");

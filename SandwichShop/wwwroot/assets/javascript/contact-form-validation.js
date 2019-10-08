@@ -1,22 +1,21 @@
 /* JavaScript Contact Form Validation. */
-var userName;
-var userEmail;
-var userComments;
-var clickedSubmitContact = false;
+
+let clickedSubmitContact = false;
+
 
 function validateContactForm() {
     if (clickedSubmitContact) {
-        var userName = document.forms["contactForm"]["userName"].value.trim();
-        var userEmail = document.forms["contactForm"]["userEmail"].value.trim();
-        var userSubject = document.forms["contactForm"]["userSubject"].value.trim();
-        var userComments = document.forms["contactForm"]["userComments"].value.trim();
-        var validContactForm = true;
+        let userName = document.forms["contactForm"]["userName"].value.trim();
+        let userEmail = document.forms["contactForm"]["userEmail"].value.trim();
+        let userSubject = document.forms["contactForm"]["userSubject"].value.trim();
+        let userComments = document.forms["contactForm"]["userComments"].value.trim();
+        let validContactForm = true;
 
-        var atPosition = userEmail.indexOf("@");
-        var dotPosition = userEmail.lastIndexOf(".");
-        var lastEmailCharacter = userEmail.length - 1;
+        let atPosition = userEmail.indexOf("@");
+        let dotPosition = userEmail.lastIndexOf(".");
+        let lastEmailCharacter = userEmail.length - 1;
 
-        var validName = true;
+        let validName = true;
         if (userName === null || userName === "") {
             validName = false;
         }
@@ -32,7 +31,7 @@ function validateContactForm() {
         /*If the @ position is at the start (or less) position of value 0,  validContactForm=false. */
         /* There must be at least 1 character after the @ position and the last dot position. */
         /* There must be at least two characters after the last "." symbol.  */
-        var validEmail = true;
+        let validEmail = true;
         if (userEmail === null || userEmail === "") {
             validEmail = false;
         } else if (atPosition <= 0) {
@@ -51,7 +50,7 @@ function validateContactForm() {
         }
 
 
-        var validComments = true;
+        let validComments = true;
         if (userComments === null || userComments === "") {
             validComments = false;
         }
@@ -79,24 +78,24 @@ function validateContactForm() {
 }
 
 function setClickedContactButtonTrue() {
-    var elementWithFocus = document.activeElement;
+    let elementWithFocus = document.activeElement;
     if (contactButton === elementWithFocus) {
         clickedSubmitContact = true;
     }
 }
 
-var contactButton = document.getElementById("contactButton");
+let contactButton = document.getElementById("contactButton");
 contactButton.addEventListener("click", setClickedContactButtonTrue, "false");
 contactButton.addEventListener("click", validateContactForm, "false");
 
-var userName = document.getElementById("userName");
+let userName = document.getElementById("userName");
 userName.addEventListener("change", validateContactForm, "false");
 
-var userSubject = document.getElementById("userSubject");
+let userSubject = document.getElementById("userSubject");
 userSubject.addEventListener("change", validateContactForm, "false");
 
-var userEmail = document.getElementById("userEmail");
+let userEmail = document.getElementById("userEmail");
 userEmail.addEventListener("change", validateContactForm, "false");
 
-var userComments = document.getElementById("userComments");
+let userComments = document.getElementById("userComments");
 userComments.addEventListener("change", validateContactForm, "false");
