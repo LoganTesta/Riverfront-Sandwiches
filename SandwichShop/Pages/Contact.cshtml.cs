@@ -9,7 +9,6 @@ using MailKit.Net.Smtp;
 using MailKit.Security;
 using MimeKit;
 
-//using System.Text; //For StringBuilder
 
 namespace SandwichShop.Pages
 {
@@ -27,26 +26,26 @@ namespace SandwichShop.Pages
             bool validForm = true;
             string contactFormResponse = "";
 
-            string userNameContact = "";
-            string userEmailContact = "";
-            string userSubjectContact = "";
-            string userCommentsContact = "";
+            string userName = "";
+            string userEmail = "";
+            string userSubject = "";
+            string userComments = "";
             try
             {
-                userNameContact = System.Web.HttpUtility.HtmlEncode(Request.Form["userName"]);
-                userEmailContact = System.Web.HttpUtility.HtmlEncode(Request.Form["userEmail"]);
-                userSubjectContact = System.Web.HttpUtility.HtmlEncode(Request.Form["userSubject"]);
-                userCommentsContact = System.Web.HttpUtility.HtmlEncode(Request.Form["userComments"]);
+                userName = System.Web.HttpUtility.HtmlEncode(Request.Form["userName"]);
+                userEmail = System.Web.HttpUtility.HtmlEncode(Request.Form["userEmail"]);
+                userSubject = System.Web.HttpUtility.HtmlEncode(Request.Form["userSubject"]);
+                userComments = System.Web.HttpUtility.HtmlEncode(Request.Form["userComments"]);
             }
             catch (Exception){
-                userNameContact = "";
-                userEmailContact = "";
-                userSubjectContact = "";
-                userCommentsContact = "";
+                userName = "";
+                userEmail = "";
+                userSubject = "";
+                userComments = "";
             }
 
 
-            if (userNameContact == "" || userEmailContact == "" || userCommentsContact == "")
+            if (userName == "" || userEmail == "" || userComments == "")
             {
                 validForm = false;
                 contactFormResponse = "Sorry, form not valid, please fill in all required (**) input fields. ";
@@ -54,21 +53,21 @@ namespace SandwichShop.Pages
 
             if(validForm)
             {
-                if (!userEmailContact.Contains("@"))
+                if (!userEmail.Contains("@"))
                 {
                     validForm = false;
                     contactFormResponse += "Email must contain at least 1 @ symbol. ";
                 }
 
-                if (!userEmailContact.Contains("."))
+                if (!userEmail.Contains("."))
                 {
                     validForm = false;
                     contactFormResponse += "Email must contain at least 1 period (.). ";
                 }
 
-                int atSymbolIndex = userEmailContact.IndexOf("@");
-                int lastPeriodSymbol = userEmailContact.LastIndexOf(".");
-                int userEmailLength = userEmailContact.Length;
+                int atSymbolIndex = userEmail.IndexOf("@");
+                int lastPeriodSymbol = userEmail.LastIndexOf(".");
+                int userEmailLength = userEmail.Length;
 
 
                 //Ensure at least 1 char before first @ symbol.
@@ -103,15 +102,15 @@ namespace SandwichShop.Pages
             {
 
                 //Construct the Email
-                string FromName = userNameContact;
-                string FromEmail = userEmailContact;
+                string FromName = userName;
+                string FromEmail = userEmail;
                 string ToEmail = "contact@riverfrontsandwiches.com";
-                string EmailSubject = userSubjectContact;
+                string EmailSubject = userSubject;
 
-                string BodyEmail = "<strong>From:</strong> " + userNameContact + "<br />";
-                BodyEmail += "<strong>Email:</strong> " + userEmailContact + "<br />";
-                BodyEmail += "<strong>Subject:</strong> " + userSubjectContact + "<br />";
-                BodyEmail += "<strong>Message/Comments:</strong> " + userCommentsContact;
+                string BodyEmail = "<strong>From:</strong> " + userName + "<br />";
+                BodyEmail += "<strong>Email:</strong> " + userEmail + "<br />";
+                BodyEmail += "<strong>Subject:</strong> " + userSubject + "<br />";
+                BodyEmail += "<strong>Message/Comments:</strong> " + userComments;
 
            
                 var emailMessage = new MimeMessage();
@@ -131,7 +130,7 @@ namespace SandwichShop.Pages
                     destinationSmtp.Disconnect(true);
                     destinationSmtp.Dispose();
 
-                    contactFormResponse = "Thank you " + userNameContact + ", we look forward to reading your comments and our reply will be sent to your email at: " + userEmailContact + ".";
+                    contactFormResponse = "Thank you " + userName + ", we look forward to reading your comments and our reply will be sent to your email at: " + userEmail + ".";
                 }              
             }
 

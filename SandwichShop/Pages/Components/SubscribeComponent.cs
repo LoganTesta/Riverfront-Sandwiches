@@ -11,10 +11,6 @@ using MailKit.Security;
 using MimeKit;
 
 
-using Microsoft.AspNetCore.Html;
-//using Microsoft.AspNetCore.ViewComponents;
-
-
 namespace SandwichShop.Components
 {
     public class SubscribeComponent : ViewComponent
@@ -22,13 +18,13 @@ namespace SandwichShop.Components
 
         public string Message { get; set; } = "";
         [BindProperty]
-        public string userNameSubscribe { get; set; }
+        public string userName { get; set; }
 
 
         public async Task<IViewComponentResult> InvokeAsync() { 
 
-            string userNameSubscribe = "";
-            string userEmailSubscribe = "";
+            string userName = "";
+            string userEmail = "";
             bool hasException = false;
 
             bool validForm = true;
@@ -36,8 +32,8 @@ namespace SandwichShop.Components
 
             try
             {
-                userNameSubscribe = "" + System.Web.HttpUtility.HtmlEncode(Request.Form["userNameSubscribe"]);
-                userEmailSubscribe = "" + System.Web.HttpUtility.HtmlEncode(Request.Form["userEmailSubscribe"]);
+                userName = "" + System.Web.HttpUtility.HtmlEncode(Request.Form["userName"]);
+                userEmail = "" + System.Web.HttpUtility.HtmlEncode(Request.Form["userEmail"]);
             }
             catch (Exception)
             {
@@ -48,7 +44,7 @@ namespace SandwichShop.Components
 
             if (hasException == false)
             {
-                if (userNameSubscribe == "" || userEmailSubscribe == "")
+                if (userName == "" || userEmail == "")
                 {
                     validForm = false;
                     contactFormResponse += "Sorry, form not valid, please fill in all required (**) input fields. ";
@@ -56,20 +52,20 @@ namespace SandwichShop.Components
 
                 if (validForm)
                 {
-                    if (!userEmailSubscribe.Contains("@"))
+                    if (!userEmail.Contains("@"))
                     {
                         validForm = false;
                         contactFormResponse += "Email must contain at least 1 @ symbol. ";
                     }
 
-                    if (!userEmailSubscribe.Contains("."))
+                    if (!userEmail.Contains("."))
                     {
                         validForm = false;
                         contactFormResponse += "Email must contain at least 1 period (.). ";
                     }
 
-                    int atSymbolIndex = userEmailSubscribe.IndexOf("@");
-                    int lastPeriodSymbol = userEmailSubscribe.LastIndexOf(".");
+                    int atSymbolIndex = userEmail.IndexOf("@");
+                    int lastPeriodSymbol = userEmail.LastIndexOf(".");
 
                     if (!(atSymbolIndex <= lastPeriodSymbol))
                     {
@@ -87,8 +83,8 @@ namespace SandwichShop.Components
                 {
                     contactFormResponse += "Valid input";
                     //Construct the Email
-                    string FromEmail = userEmailSubscribe;
-                    string FromName = userNameSubscribe;
+                    string FromEmail = userEmail;
+                    string FromName = userName;
                     string ToEmail = "contact@riverfrontsandwiches.com";
                     string EmailSubject = "Please Subscribe me for emails.";
 
@@ -111,7 +107,7 @@ namespace SandwichShop.Components
                         destinationSmtp.Disconnect(true);
                         destinationSmtp.Dispose();
 
-                        contactFormResponse = "Thank you " + userNameSubscribe + ", we look forward to reading your comments and our reply will be sent to your email at: " + userEmailSubscribe + ".";
+                        contactFormResponse = "Thank you " + userName + ", we look forward to reading your comments and our reply will be sent to your email at: " + userEmail + ".";
                     }
                 }
             }
@@ -119,11 +115,5 @@ namespace SandwichShop.Components
 
             return View("Default", Message);
         }
-
-        //public string Invoke()
-        //{
-        //    return "" + Message;
-        //}
-
     }
 }
