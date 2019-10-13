@@ -19,7 +19,8 @@ html {
     box-sizing: inherit;
 }
 
-/***########## Grid Column layout available.  Desktop and mobile settings.  Automatically make columns full width below a certain width. ***/
+/***########## Grid Column layout available.  Desktop and mobile settings.  Automatically make columns full width below a certain width. Very-small (vsm) 
+columns display at their designated widths at all device sizes, small (sma) above the first breakpoint, large (lar) above the next breakpoint. ***/
 .content {
     width: 100%;
     padding: 20px 10px 20px 10px;
@@ -47,6 +48,60 @@ html {
     padding-left: 0;
     padding-right: 0;
 }
+
+.col-vsm-1, .col-vsm-2, .col-vsm-3, .col-vsm-4, .col-vsm-5, .col-vsm-6, .col-vsm-7, .col-vsm-8, .col-vsm-9, .col-vsm-10, .col-vsm-11, .col-vsm-12 {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-vsm-1 {
+    width: 8.333333%;
+}
+
+.col-vsm-2 {
+    width: 16.666667%;
+}
+
+.col-vsm-3 {
+    width: 25%;
+}
+
+.col-vsm-4 {
+    width: 33.333333%;
+}
+
+.col-vsm-5 {
+    width: 41.666667%;
+}
+
+.col-vsm-6 {
+    width: 50%;
+}
+
+.col-vsm-7 {
+    width: 58.33333%;
+}
+
+.col-vsm-8 {
+    width: 66.666667%;
+}
+
+.col-vsm-9 {
+    width: 75%;
+}
+
+.col-vsm-10 {
+    width: 83.333333%;
+}
+
+.col-vsm-11 {
+    width: 91.666667%;
+}
+
+.col-vsm-12 {
+    width: 100%;
+}  
 
 /* Switch to 12 columns at 700px for small columns and 1200px for large columns. */
 @media only screen and (min-width: 700px) {
