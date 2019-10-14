@@ -905,6 +905,7 @@ body {
     padding-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
+    background: 50% 50%/cover no-repeat;
 }
 
 .slideshow__header {
@@ -1418,8 +1419,6 @@ body {
     .slideshow__image {
         position: relative;
         padding-bottom: 56.25%;
-        background: 0 bottom no-repeat;
-        background-size: 100%;
     }
 
     .slideshow__header {
