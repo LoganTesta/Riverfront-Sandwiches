@@ -32,8 +32,8 @@ namespace SandwichShop.Components
 
             try
             {
-                userName = "" + System.Web.HttpUtility.HtmlEncode(Request.Form["userName"]);
-                userEmail = "" + System.Web.HttpUtility.HtmlEncode(Request.Form["userEmail"]);
+                userName = "" + System.Web.HttpUtility.HtmlEncode(Request.Form["userNameSubscribe"]);
+                userEmail = "" + System.Web.HttpUtility.HtmlEncode(Request.Form["userEmailSubscribe"]);
             }
             catch (Exception)
             {
@@ -91,7 +91,7 @@ namespace SandwichShop.Components
                     string BodyEmail = "Subscribe this user please.";
 
                     var emailMessage = new MimeMessage();
-                    emailMessage.From.Add(new MailboxAddress(FromName, FromEmail));
+                    emailMessage.From.Add(new MailboxAddress(FromName, ToEmail));
                     emailMessage.To.Add(new MailboxAddress("Riverfront Sandwiches", ToEmail));
 
                     emailMessage.Subject = EmailSubject;

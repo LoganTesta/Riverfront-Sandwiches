@@ -114,7 +114,7 @@ namespace SandwichShop.Pages
 
            
                 var emailMessage = new MimeMessage();
-                emailMessage.From.Add(new MailboxAddress(FromName, FromEmail));
+                emailMessage.From.Add(new MailboxAddress(FromName, ToEmail));
                 emailMessage.To.Add(new MailboxAddress("Riverfront Sandwiches", ToEmail));
 
                 emailMessage.Subject = EmailSubject;
