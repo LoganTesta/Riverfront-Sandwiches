@@ -1,6 +1,9 @@
 ﻿@page
 @model ContactModel
 @{
+    @using Microsoft.AspNetCore.Html;
+
+
     ViewData["Title"] = "Contact Us";
 
     var contactResponse = ViewData["Message"];
@@ -19,7 +22,7 @@
             if (@contactResponse != null)
             {
                 <div class="form-response">
-                    @contactResponse
+                    @(new HtmlString("" + @contactResponse))
                 </div>
             }
         }

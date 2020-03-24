@@ -1,5 +1,6 @@
 ﻿
 @model string
+@using Microsoft.AspNetCore.Html;
 
 <div class="footer__subscribe">
     <h3 class="footer__subscribe-subheader">Subscribe For News and Special Coupons Here!</h3>
@@ -20,7 +21,7 @@
         </div>
         <div class="javascript-validation-results-subscribe"></div>
         <div class="subscribe-form-response">
-            @Model
+            @(new HtmlString("" + @Model))
         </div>
     </form>
 </div>

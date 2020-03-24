@@ -107,7 +107,7 @@ namespace SandwichShop.Components
                         destinationSmtp.Disconnect(true);
                         destinationSmtp.Dispose();
 
-                        contactFormResponse = "Thank you " + userName + ", we look forward to reading your comments and our reply will be sent to your email at: " + userEmail + ".";
+                        contactFormResponse = "Thank you <strong><em>" + userName + "</em></strong>!<br /> We look forward to reading your comments and our reply will be sent to your email at: <strong><em>" + userEmail + "</em></strong>.";
                     }
                 }
             }
