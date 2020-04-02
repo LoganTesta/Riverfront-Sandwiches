@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace SandwichShop.Pages
+namespace RiverfrontSandwiches.Pages
 {
     public class Error404Model : PageModel
     {

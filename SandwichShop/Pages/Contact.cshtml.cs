@@ -10,7 +10,7 @@ using MailKit.Security;
 using MimeKit;
 
 
-namespace SandwichShop.Pages
+namespace RiverfrontSandwiches.Pages
 {
     public class ContactModel : PageModel
     {

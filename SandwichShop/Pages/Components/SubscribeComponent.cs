@@ -11,7 +11,7 @@ using MailKit.Security;
 using MimeKit;
 
 
-namespace SandwichShop.Components
+namespace RiverfrontSandwiches.Components
 {
     public class SubscribeComponent : ViewComponent
     {
