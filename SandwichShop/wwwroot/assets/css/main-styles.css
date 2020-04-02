@@ -1324,8 +1324,6 @@ body {
     }
 
 
-
-
     .mobile-nav {
         display: none;
     }
@@ -1338,21 +1336,18 @@ body {
     }
 
 
-
-
     .nav__nav-list-container {
         position: absolute;
         top: 0;
-        width: 621px;
-        padding: 20px 15px;
+        width: 609px;
+        padding: 20px 30px;
         border-radius: 20px;
         background-color: rgba(16, 116, 149, 0.75);
     }
 
     .nav__nav-list {
-        padding-left: 15px;
+        padding-left: 0px;
     }
-
 
 
     .nav__nav-item {
