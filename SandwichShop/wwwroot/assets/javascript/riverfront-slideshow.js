@@ -2,6 +2,7 @@
 let currentSlide;
 let slideshowCounter = 0;
 let paused = false;
+let updateSlideSettings = true;
 let currentSlideNumber = 0;
 const maxSlideNumber = 3;
 let pausePlayButton;
@@ -58,6 +59,7 @@ function runSlideShow() {
     if (paused === false) {
         if (slideshowCounter === 0) {
             currentSlide.style.opacity = 0;
+            updateSlideSettings = true;
         }
         if (slideshowCounter < 100) {
             currentSlide.style.opacity = parseFloat(currentSlide.style.opacity) + 0.01;
@@ -76,34 +78,38 @@ function runSlideShow() {
         if (currentSlideNumber > maxSlideNumber) {
             currentSlideNumber = 0;
         }
-        if (currentSlideNumber === 0) {
-            slideshowHeader.innerHTML = "Our Specialty Grilled Cheese Sandwich";
-            currentSlide.style.backgroundImage = "url(" + slide0.src + ")";
-            slideButton0.style.opacity = 1.0;
-            slideButton1.style.opacity = 0.40;
-            slideButton2.style.opacity = 0.40;
-            slideButton3.style.opacity = 0.40;
-        } else if (currentSlideNumber === 1) {
-            slideshowHeader.innerHTML = "Fresh Strawberry Smoothies";
-            currentSlide.style.backgroundImage = "url(" + slide1.src + ")";
-            slideButton0.style.opacity = 0.40;
-            slideButton1.style.opacity = 1.0;
-            slideButton2.style.opacity = 0.40;
-            slideButton3.style.opacity = 0.40;
-        } else if (currentSlideNumber === 2) {
-            slideshowHeader.innerHTML = "Bold Ham Sandwich";
-            currentSlide.style.backgroundImage = "url(" + slide2.src + ")";
-            slideButton0.style.opacity = 0.40;
-            slideButton1.style.opacity = 0.40;
-            slideButton2.style.opacity = 1.0;
-            slideButton3.style.opacity = 0.40;
-        } else if (currentSlideNumber === 3) {
-            slideshowHeader.innerHTML = "Fresh Green Fruit and Veggie Smoothies";
-            currentSlide.style.backgroundImage = "url(" + slide3.src + ")";
-            slideButton0.style.opacity = 0.40;
-            slideButton1.style.opacity = 0.40;
-            slideButton2.style.opacity = 0.40;
-            slideButton3.style.opacity = 1.0;
+
+        if (updateSlideSettings) {
+            updateSlideSettings = false;
+            if (currentSlideNumber === 0) {
+                slideshowHeader.innerHTML = "Our Specialty Grilled Cheese Sandwich";
+                currentSlide.style.backgroundImage = "url(" + slide0.src + ")";
+                slideButton0.style.opacity = 1.0;
+                slideButton1.style.opacity = 0.40;
+                slideButton2.style.opacity = 0.40;
+                slideButton3.style.opacity = 0.40;
+            } else if (currentSlideNumber === 1) {
+                slideshowHeader.innerHTML = "Fresh Strawberry Smoothies";
+                currentSlide.style.backgroundImage = "url(" + slide1.src + ")";
+                slideButton0.style.opacity = 0.40;
+                slideButton1.style.opacity = 1.0;
+                slideButton2.style.opacity = 0.40;
+                slideButton3.style.opacity = 0.40;
+            } else if (currentSlideNumber === 2) {
+                slideshowHeader.innerHTML = "Bold Ham Sandwich";
+                currentSlide.style.backgroundImage = "url(" + slide2.src + ")";
+                slideButton0.style.opacity = 0.40;
+                slideButton1.style.opacity = 0.40;
+                slideButton2.style.opacity = 1.0;
+                slideButton3.style.opacity = 0.40;
+            } else if (currentSlideNumber === 3) {
+                slideshowHeader.innerHTML = "Fresh Green Fruit and Veggie Smoothies";
+                currentSlide.style.backgroundImage = "url(" + slide3.src + ")";
+                slideButton0.style.opacity = 0.40;
+                slideButton1.style.opacity = 0.40;
+                slideButton2.style.opacity = 0.40;
+                slideButton3.style.opacity = 1.0;
+            }
         }
         slideshowCounter++;
     }
@@ -120,4 +126,5 @@ function setSlide(slideNumber) {
     slideshowCounter = 50;
     currentSlideNumber = slideNumber;
     paused = false;
+    updateSlideSettings = true;
 }
