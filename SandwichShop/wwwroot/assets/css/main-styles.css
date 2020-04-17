@@ -960,9 +960,13 @@ body {
 }
 
 #pausePlayButton {
-    background: url(../images/pause-button.png);
+    background: url(../images/pause-button.png) 50% 50%/cover no-repeat;
     border-radius: 5px;
 }
+
+    #pausePlayButton.paused {
+        background: url(../images/play-button.png) 50% 50%/cover no-repeat;
+    }
 
 #slideButton3 {
     margin-bottom: 10px;

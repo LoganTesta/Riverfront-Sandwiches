@@ -52,11 +52,6 @@ function runFunctions() {
 function runSlideShow() {
 
     if (paused === false) {
-        pausePlayButton.style.background = "url(assets/images/pause-button.png)";
-    } else if (paused) {
-        pausePlayButton.style.background = "url(assets/images/play-button.png)";
-    }
-    if (paused === false) {
         if (slideshowCounter === 0) {
             currentSlide.style.opacity = 0;
             updateSlideSettings = true;
@@ -117,6 +112,11 @@ function runSlideShow() {
 
 function togglePausePlay() {
     paused = !paused;
+    if (paused === false) {
+        pausePlayButton.classList.remove("paused");
+    } else if (paused) {
+        pausePlayButton.classList.add("paused");
+    }
 }
 
 let pausePlay = document.getElementById("pausePlayButton");
