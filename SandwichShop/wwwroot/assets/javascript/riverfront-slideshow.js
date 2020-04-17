@@ -125,6 +125,6 @@ pausePlay.addEventListener("click", togglePausePlay, false);
 function setSlide(slideNumber) {
     slideshowCounter = 50;
     currentSlideNumber = slideNumber;
-    paused = false;
     updateSlideSettings = true;
+    togglePausePlay();
 }
