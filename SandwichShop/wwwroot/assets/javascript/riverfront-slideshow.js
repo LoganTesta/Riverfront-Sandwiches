@@ -53,21 +53,21 @@ function runSlideShow() {
 
     if (paused === false) {
         if (slideshowCounter === 0) {
-            currentSlide.style.opacity = 0;
+            currentSlide.style.opacity = 0.1;
         }
-        if (slideshowCounter < 100) {
-            currentSlide.style.opacity = parseFloat(currentSlide.style.opacity) + 0.01;
+        if (slideshowCounter < 180) {
+            currentSlide.style.opacity = parseFloat(currentSlide.style.opacity) + 0.005;
         }
-        if (100 <= slideshowCounter && slideshowCounter < 600) {
+        if (180 <= slideshowCounter && slideshowCounter < 680) {
             currentSlide.style.opacity = 1;
         }
-        if (slideshowCounter >= 600) {
-            currentSlide.style.opacity = parseFloat(currentSlide.style.opacity) - 0.01;
+        if (slideshowCounter >= 680) {
+            currentSlide.style.opacity = parseFloat(currentSlide.style.opacity) - 0.005;
         }
-        if (slideshowCounter >= 700) {
+        if (slideshowCounter >= 860) {
             slideshowCounter = 0;
             updateSlideSettings = true;
-            currentSlide.style.opacity = 0;
+            currentSlide.style.opacity = 0.1;
             currentSlideNumber++;
         }
         if (currentSlideNumber > maxSlideNumber) {
