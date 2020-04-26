@@ -77,7 +77,7 @@ function runSlideShow() {
         if (updateSlideSettings) {
             updateSlideSettings = false;
             if (currentSlideNumber === 0) {
-                slideshowHeader.innerHTML = "Our Specialty Grilled Cheese Sandwich";
+                slideshowHeader.innerHTML = "Our Grilled Cheese Sandwich";
                 currentSlide.style.backgroundImage = "url(" + slide0.src + ")";
                 slideButton0.style.opacity = 1.0;
                 slideButton1.style.opacity = 0.40;
@@ -98,7 +98,7 @@ function runSlideShow() {
                 slideButton2.style.opacity = 1.0;
                 slideButton3.style.opacity = 0.40;
             } else if (currentSlideNumber === 3) {
-                slideshowHeader.innerHTML = "Fresh Green Fruit and Veggie Smoothies";
+                slideshowHeader.innerHTML = "Fruit and Veggie Smoothies";
                 currentSlide.style.backgroundImage = "url(" + slide3.src + ")";
                 slideButton0.style.opacity = 0.40;
                 slideButton1.style.opacity = 0.40;

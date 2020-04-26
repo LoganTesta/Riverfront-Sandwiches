@@ -899,9 +899,6 @@ body {
 
 .slideshow {
     position: static;
-    width: 100%;
-    max-width: 658px;
-    height: 100%;
     padding-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
@@ -917,31 +914,28 @@ body {
 }
 
 .slideshow__header {
-    padding: 15px 10px;
-    border-radius: 15px 15px 0 0;
+    padding: 10px 10px;
     font-size: 20px;
     text-align: center;
     font-weight: bold;
-    background-color: #107495;
-    color: #ffffff;
+    color: #107495;
 }
 
 .slideshow__buttons {
     display: flex;
     flex-wrap: wrap;
-    border-radius: 0 0 15px 15px;
-    background-color: #107495;
+    justify-content: center;
 }
 
 .slideshow__slide-button {
     display: block;
     float: left;
-    width: 50px;
-    height: 50px;
+    width: 22px;
+    height: 22px;
     margin-top: 10px;
     margin-left: 12px;
-    background-color: #ffffff;
-    border-radius: 5px;
+    background-color: #107495;
+    border-radius: 11px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -951,17 +945,10 @@ body {
         transition: 0.3s;
     }
 
-.slideshow__button-text {
-    margin-top: 14px;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    color: #ee3311;
-}
-
 #pausePlayButton {
-    background: url(../images/pause-button.png) 50% 50%/cover no-repeat;
+    margin-left: 0px;
     border-radius: 5px;
+    background: url(../images/pause-button.png) 50% 50%/cover no-repeat;
 }
 
     #pausePlayButton.paused {
@@ -1423,15 +1410,13 @@ body {
     /* Index page */
     .slideshow {
         position: relative;
-        width: 658px;
-        height: 100%;
         margin-left: auto;
         margin-right: 0px;
     }
 
     .slideshow__image {
         position: relative;
-        padding-bottom: 56.25%;
+        height: 300px;
     }
 
     .slideshow__header {
