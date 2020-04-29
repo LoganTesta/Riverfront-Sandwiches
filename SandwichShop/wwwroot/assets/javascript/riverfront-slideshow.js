@@ -20,6 +20,7 @@ let slideButton0 = document.getElementById('slideButton0');
 let slideButton1 = document.getElementById('slideButton1');
 let slideButton2 = document.getElementById('slideButton2');
 let slideButton3 = document.getElementById('slideButton3');
+
 slideButton0.addEventListener('click', function () {
     setSlide(0);
 }, false);
@@ -32,6 +33,19 @@ slideButton2.addEventListener('click', function () {
 slideButton3.addEventListener('click', function () {
     setSlide(3);
 }, false);
+
+let backIcon = document.getElementsByClassName("slideshow__icon")[0];
+let forwardIcon = document.getElementsByClassName("slideshow__icon")[1];
+
+backIcon.addEventListener('click', function () {
+    setSlide(currentSlideNumber - 1);
+}, false);
+
+forwardIcon.addEventListener('click', function () {
+    setSlide(currentSlideNumber + 1);
+}, false);
+
+
 
 function init() {
     currentSlide = document.getElementsByClassName("slideshow__image")[0];
@@ -70,7 +84,10 @@ function runSlideShow() {
             currentSlide.style.opacity = 0.1;
             currentSlideNumber++;
         }
-        if (currentSlideNumber > maxSlideNumber) {
+
+        if (currentSlideNumber < 0) {
+            currentSlideNumber = maxSlideNumber;
+        } else if (currentSlideNumber > maxSlideNumber) {
             currentSlideNumber = 0;
         }
 

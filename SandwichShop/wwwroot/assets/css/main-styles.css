@@ -415,8 +415,8 @@ input, textarea, select {
     Color 2: cobalt-blue          #107495      (16, 116, 149)
     Color 3: green-yellow         #85da10      (133, 218, 16)
 
-    Color 4: darker red           #ba2206      (186, 34, 6)     (darker by 1 mark than Color 1)
-    Color 5: light green-yellow   #d6f6a9             (much brighter 2 marks and 20% bright than Color 3)
+    Color 4: darker red           #ba2206      (186, 34, 6)        (darker by 1 mark than Color 1)
+    Color 5: light green-yellow   #d6f6a9      (214, 246, 169)     (much brighter 2 marks and 20% bright than Color 3)
 */
 
 
@@ -928,29 +928,43 @@ body {
 }
 
 .slideshow__icon {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     border-radius: 15px;
-    background-color: rgba(16, 116, 149, 0.9);
+    background-color: rgba(16, 116, 149, 0.7);
     user-select: none;
+    transition: 0.3s;
 }
+
+    .slideshow__icon:hover {
+        background-color: rgba(16, 116, 149, 0.9);
+        transition: 0.3s;
+    }
 
     .slideshow__icon.left {
         position: absolute;
-        top: 85px;
+        top: 84px;
         left: 15px;
     }
 
     .slideshow__icon.right {
         position: absolute;
-        top: 85px;
+        top: 84px;
         right: 15px;
     }
 
 .slideshow__icon__link {
     font-size: 20px;
+    line-height: 32px;
+    font-weight: bold;
     text-align: center;
-    color: #ffffff;
+    color: rgba(255, 255, 255, 0.7);
+    transition: 0.3s;
+}
+
+.slideshow__icon:hover .slideshow__icon__link {
+    color: rgba(255, 255, 255, 0.9);
+    transition: 0.3s;
 }
 
 .slideshow__buttons {
@@ -1289,11 +1303,11 @@ body {
     }
 
     .slideshow__icon.left {
-        top: 105px;
+        top: 104px;
     }
 
     .slideshow__icon.right {
-        top: 105px;
+        top: 104px;
     }
 
 
@@ -1472,11 +1486,11 @@ body {
     }
 
     .slideshow__icon.left {
-        top: 145px;
+        top: 144px;
     }
 
     .slideshow__icon.right {
-        top: 145px;
+        top: 144px;
     }
 
 
