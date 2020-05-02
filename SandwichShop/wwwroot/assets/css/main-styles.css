@@ -509,12 +509,6 @@ body {
     background-color: rgba(250, 240, 230, 1);
 }
 
-.body-wrapper {
-    width: 100%;
-    margin: 0 auto;
-    background-color: #ffffff;
-}
-
 
 .header {
     min-height: 240px;
@@ -525,7 +519,7 @@ body {
     top: 0;
     width: 100%;
     min-height: 240px;
-    background: url('/assets/images/restaurant-interior-wood-tables-windows.jpeg') 50% 30%/cover no-repeat;
+    background: url('/assets/images/restaurant-interior-wood-tables-windows.jpg') 50% 30%/cover no-repeat;
 }
 
 
@@ -1342,17 +1336,20 @@ body {
 
 
     .body-wrapper {
+    }
+
+    .inner-wrapper {
         width: 1200px;
     }
 
 
 
     .header {
-        min-height: 400px;
+        min-height: 440px;
     }
 
     .header__background {
-        min-height: 400px;
+        min-height: 440px;
     }
 
     .main-title-container {
@@ -1384,7 +1381,7 @@ body {
     .desktop-nav {
         display: block;
         position: absolute;
-        top: 40px;
+        top: -400px;
         left: 50px;
     }
 
