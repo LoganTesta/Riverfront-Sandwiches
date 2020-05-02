@@ -509,6 +509,14 @@ body {
     background-color: rgba(250, 240, 230, 1);
 }
 
+.body-wrapper {
+    background: linear-gradient(90deg, rgba(250, 240, 230, 1), rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 1) 65%, rgba(250, 240, 230, 1));
+}
+
+.content {
+    background-color: #ffffff;
+}
+
 
 .header {
     min-height: 240px;
