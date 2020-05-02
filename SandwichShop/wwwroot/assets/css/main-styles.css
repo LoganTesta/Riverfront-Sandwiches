@@ -894,7 +894,7 @@ body {
 
 
 /*Index*/
-.background-hero-image.index {
+.background-hero-image.index-one {
     background: url('/assets/images/sandwich-on-table.jpg') 50% 30%/cover no-repeat;
 }
 
@@ -1510,20 +1510,32 @@ body {
 
     .slideshow__image {
         position: relative;
-        height: 320px;
+        height: 360px;
     }
 
     .slideshow__header {
-        top: 269px;
+        top: 309px;
         font-size: 26px;
     }
 
     .slideshow__icon.left {
-        top: 144px;
+        top: 164px;
     }
 
     .slideshow__icon.right {
-        top: 144px;
+        top: 164px;
+    }
+
+    .background-hero-image.index-one {
+        min-height: 360px;
+    }
+
+    .background-hero-image.index-two {
+        min-height: 360px;
+    }
+
+    .background-hero-image.index-three {
+        min-height: 360px;
     }
 
 
