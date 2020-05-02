@@ -530,6 +530,23 @@ body {
     background: url('/assets/images/restaurant-interior-wood-tables-windows.jpg') 50% 30%/cover no-repeat;
 }
 
+.header__semi-opaque-background-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5%;
+    height: 240px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+}
+
+.header__semi-opaque-background-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5%;
+    height: 240px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6));
+}
 
 
 .main-title-container {
@@ -1359,6 +1376,17 @@ body {
     .header__background {
         min-height: 440px;
     }
+
+    .header__semi-opaque-background-left {
+        width: 10%;
+        height: 440px;
+    }
+
+    .header__semi-opaque-background-right {
+        width: 10%;
+        height: 440px;
+    }
+
 
     .main-title-container {
         position: absolute;
