@@ -76,36 +76,54 @@
         </div>
         <footer class="footer">
             <div class="inner-wrapper">
-                <div class="footer__copyright">&copy; @currentYear Riverfront Sandwiches.  All Rights Reserved.</div>
-                <div class="footer__locations">Locations: SW Portland, SE Portland, Hillsboro, West Slope.</div>
-                <div class="footer__phone">503-332-2198</div>
-                <div class="content-row">
-                    <div class="col-sma-4">
-                        <div class="footer__general-phrase">Made fresh daily!</div>
-                    </div>
-                    <div class="col-sma-4">
-                        <div class="footer__social">
-                            <div class="footer__social-item">
-                                <a href="/">
-                                    <i class="fab fa-facebook-f fa-2x social-icon"><span class="sr-only">Facebook</span></i>
-                                </a>
-                            </div>
-                            <div class="footer__social-item">
-                                <a href="/">
-                                    <i class="fab fa-pinterest fa-2x social-icon"><span class="sr-only">Pinterest</span></i>
-                                </a>
-                            </div>
-                            <div class="footer__social-item">
-                                <a href="/">
-                                    <i class="fab fa-instagram fa-2x social-icon"><span class="sr-only">Instagram</span></i>
-                                </a>
+                <div class="footer__additional-wrapper">
+                    <div class="footer__copyright">&copy; @currentYear Riverfront Sandwiches.  All Rights Reserved.</div>
+                    <div class="footer__locations">Locations: SW Portland, SE Portland, Hillsboro, West Slope.</div>
+                    <div class="footer__phone">503-332-2198</div>
+                    <div class="content-row">
+                        <div class="col-sma-3">
+                            <div class="footer__general-info">
+                                <p>Custom in-house sandwiches</p>
+                                <p>Fresh smoothies</p>
+                                <p>Made fresh daily!</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sma-4">
-                        <div class="footer__hours">
-                            Open 10am-9pm Monday-Sunday
-                            @await Component.InvokeAsync("SubscribeComponent")
+                        <div class="col-sma-2">
+                            <div class="footer__nav">
+                                <div class="footer__nav-list">
+                                    <div class="footer__nav-item"><a class="footer__nav-link" asp-page="/Index">Home</a></div>
+                                    <div class="footer__nav-item"><a class="footer__nav-link" asp-page="/About">About Us</a></div>
+                                    <div class="footer__nav-item"><a class="footer__nav-link" asp-page="/Food">Food!</a></div>
+                                    <div class="footer__nav-item"><a class="footer__nav-link" asp-page="/Beverages">Beverages</a></div>
+                                    <div class="footer__nav-item"><a class="footer__nav-link" asp-page="/Events">Events</a></div>
+                                    <div class="footer__nav-item"><a class="footer__nav-link" asp-page="/Contact">Contact Us</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sma-3">
+                            <div class="footer__social">
+                                <div class="footer__social-item">
+                                    <a href="/">
+                                        <i class="fab fa-facebook-f fa-2x social-icon"><span class="sr-only">Facebook</span></i>
+                                    </a>
+                                </div>
+                                <div class="footer__social-item">
+                                    <a href="/">
+                                        <i class="fab fa-pinterest fa-2x social-icon"><span class="sr-only">Pinterest</span></i>
+                                    </a>
+                                </div>
+                                <div class="footer__social-item">
+                                    <a href="/">
+                                        <i class="fab fa-instagram fa-2x social-icon"><span class="sr-only">Instagram</span></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sma-4">
+                            <div class="footer__hours">
+                                Open 10am-9pm Monday-Sunday
+                                @await Component.InvokeAsync("SubscribeComponent")
+                            </div>
                         </div>
                     </div>
                 </div>
