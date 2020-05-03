@@ -729,7 +729,13 @@ body {
     text-align: center;
     font-size: 18px;
     color: #ffffff;
+    transition: 0.2s ease-in;
 }
+
+    .footer .footer__nav-link:hover {
+        color: #85da10;
+        transition: 0.2s ease-in;
+    }
 
 .footer__social {
     width: 148px;
