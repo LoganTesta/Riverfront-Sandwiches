@@ -764,6 +764,10 @@ body {
     color: #ffffff;
 }
 
+    .footer__general-info p {
+        font-size: 18px;
+    }
+
 .footer__hours {
     padding-bottom: 0px;
     text-align: center;
@@ -771,7 +775,9 @@ body {
     color: #ffffff;
 }
 
-
+.footer-hours__open-times {
+    font-size: 18px;
+}
 
 .footer__subscribe {
     padding-top: 15px;
@@ -1309,7 +1315,11 @@ body {
         padding-bottom: 0;
     }
 
-   .footer .footer__nav-link {
+    .footer__nav-item {
+        padding-bottom: 20px;
+    }
+
+    .footer .footer__nav-link {
         text-align: left;
     }
 
@@ -1502,7 +1512,6 @@ body {
     }
 
     .footer__subscribe {
-        width: 310px;
     }
 
     .subscribe__label {
