@@ -21,18 +21,13 @@ let slideButton1 = document.getElementById('slideButton1');
 let slideButton2 = document.getElementById('slideButton2');
 let slideButton3 = document.getElementById('slideButton3');
 
-slideButton0.addEventListener('click', function () {
-    setSlide(0);
-}, false);
-slideButton1.addEventListener('click', function () {
-    setSlide(1);
-}, false);
-slideButton2.addEventListener('click', function () {
-    setSlide(2);
-}, false);
-slideButton3.addEventListener('click', function () {
-    setSlide(3);
-}, false);
+slideButtons = new Array(slideButton0, slideButton1, slideButton2, slideButton3);
+
+for (let i = 0; i < maxSlideNumber + 1; i++) {
+    slideButtons[i].addEventListener('click', function () {
+        setSlide(i);
+    }, false);
+}
 
 let backIcon = document.getElementsByClassName("slideshow__icon")[0];
 let forwardIcon = document.getElementsByClassName("slideshow__icon")[1];
@@ -93,34 +88,25 @@ function runSlideShow() {
 
         if (updateSlideSettings) {
             updateSlideSettings = false;
+            for (let i = 0; i < maxSlideNumber + 1; i++) {
+                slideButtons[i].classList.remove("active");
+            }
             if (currentSlideNumber === 0) {
                 slideshowHeader.innerHTML = "Our Grilled Cheese Sandwich";
                 currentSlide.style.backgroundImage = "url(" + slide0.src + ")";
-                slideButton0.style.opacity = 1.0;
-                slideButton1.style.opacity = 0.40;
-                slideButton2.style.opacity = 0.40;
-                slideButton3.style.opacity = 0.40;
+                slideButton0.classList.add("active");
             } else if (currentSlideNumber === 1) {
                 slideshowHeader.innerHTML = "Fresh Strawberry Smoothies";
                 currentSlide.style.backgroundImage = "url(" + slide1.src + ")";
-                slideButton0.style.opacity = 0.40;
-                slideButton1.style.opacity = 1.0;
-                slideButton2.style.opacity = 0.40;
-                slideButton3.style.opacity = 0.40;
+                slideButton1.classList.add("active");
             } else if (currentSlideNumber === 2) {
                 slideshowHeader.innerHTML = "Bold Ham Sandwich";
                 currentSlide.style.backgroundImage = "url(" + slide2.src + ")";
-                slideButton0.style.opacity = 0.40;
-                slideButton1.style.opacity = 0.40;
-                slideButton2.style.opacity = 1.0;
-                slideButton3.style.opacity = 0.40;
+                slideButton2.classList.add("active");
             } else if (currentSlideNumber === 3) {
                 slideshowHeader.innerHTML = "Fruit and Veggie Smoothies";
                 currentSlide.style.backgroundImage = "url(" + slide3.src + ")";
-                slideButton0.style.opacity = 0.40;
-                slideButton1.style.opacity = 0.40;
-                slideButton2.style.opacity = 0.40;
-                slideButton3.style.opacity = 1.0;
+                slideButton3.classList.add("active");
             }
         }
         slideshowCounter++;

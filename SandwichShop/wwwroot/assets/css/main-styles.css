@@ -1036,15 +1036,19 @@ body {
     height: 20px;
     margin-top: 10px;
     margin-left: 12px;
-    background-color: #107495;
+    background-color: #7bc0d7;
     border-radius: 10px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease-in;
 }
 
+    .slideshow__slide-button.active {
+        background-color: #107495;
+    }
+
     .slideshow__slide-button:hover {
-        box-shadow: 0px 0px 5px 5px #85da10;
-        transition: 0.3s;
+        box-shadow: 0px 0px 4px 4px rgba(238, 51, 17, 0.8);
+        transition: 0.3s ease-in;
     }
 
 #pausePlayButton {
