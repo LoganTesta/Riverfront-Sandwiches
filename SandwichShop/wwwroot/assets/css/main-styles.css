@@ -664,6 +664,7 @@ body {
 }
 
     .nav .nav__nav-link:hover {
+        font-style: italic;
         text-decoration: underline;
         color: #85da10;
     }
