@@ -1,0 +1,92 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="content-row">
+    <div class="col-sma-5">
+        <div class="subtitle-container">
+            <h2 class="subtitle-container__subtitle">The Best Local Sandwhich Shop</h2>
+        </div>
+        <div>
+            <p>Your favorite place for a hearty and satisfying sandwich!</p>
+            <p>
+                We serve everything from fresh delicious veggie sandwiches to fresh full salami, ham, turkey, and cheese
+                sandwiches.
+            </p>
+            <p><strong>Every Friday</strong>: Get any whole sandwich for <strong>only $6</strong>!</p>
+            <p>We look forward to your visit at the best sandwich shop in the Portland area!</p>
+        </div>
+    </div>
+    <div class="col-sma-7">
+        <div class="slideshow">
+            <div class="slideshow__header"></div>
+            <div class="slideshow__image"></div>
+            <div class="slideshow__icon left">
+                <div class="slideshow__icon__link">&#10094;</div>
+            </div>
+            <div class="slideshow__icon right">
+                <div class="slideshow__icon__link">&#10095;</div>
+            </div>
+            <div class="slideshow__buttons">
+                <div id="pausePlayButton" class="slideshow__slide-button"></div>
+                <div id="slideButton0" class="slideshow__slide-button">
+                </div>
+                <div id="slideButton1" class="slideshow__slide-button">
+                </div>
+                <div id="slideButton2" class="slideshow__slide-button">
+                </div>
+                <div id="slideButton3" class="slideshow__slide-button">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-row">
+    <div class="col-sma-6">
+        <div class="background-hero-image index-one"></div>
+    </div>
+    <div class="col-sma-6">
+        <div>
+            <h3>Custom Sandwiches Your Way</h3>
+            <p>Made fresh in-house every day!</p>
+            <p>Open daily 10am-9pm Monday-Sunday</p>
+        </div>
+    </div>
+</div>
+<div class="content-row">
+    <div class="col-sma-5">
+        <div>
+            <h3>Get Your Ice-Chill Smoothie Here!</h3>
+            <p>Choose from several popular smoothie favorites.</p>
+            <p>Customize your smoothie too!</p>
+            <div class="learn-more smoothie"><a href="/beverages" class="learn-more__link">SEE OUR SMOOTHIES</a></div>
+        </div>
+    </div>
+    <div class="col-sma-7">
+        <div class="background-hero-image index-two"></div>
+    </div>
+</div>
+<div class="content-row">
+    <div class="col-sma-7">
+        <div class="background-hero-image index-three"></div>
+    </div>
+    <div class="col-sma-5">
+        <div>
+            <h3>Farm-Fresh Local Ingredients</h3>
+            <p>Over 80% of our ingredients are local within a 50 mile radius.</p>
+            <p>It's a win-win for food freshness, the environment, and local farmers!</p>
+            <div class="learn-more about"><a href="/about" class="learn-more__link">LEARN MORE ABOUT US</a></div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            setCurrentPage(0, "desktopNav");
+        });
+</script>
+<script type="text/javascript" src="~/assets/javascript/riverfront-slideshow.js"></script>
