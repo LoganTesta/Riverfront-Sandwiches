@@ -444,6 +444,10 @@ h4 {
     color: #ee3311;
 }
 
+p {
+    line-height: 1.5;
+}
+
 input, textarea {
     padding: 12px 15px;
     color: #ee3311;
