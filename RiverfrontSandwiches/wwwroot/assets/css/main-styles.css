@@ -810,6 +810,10 @@ body {
     transition: box-shadow 0.5s;
 }
 
+.form__input-container.subscribe {
+    padding: 10px 0 0 0;
+}
+
 .footer__subscribe-button {
     display: block;
     padding: 10px 15px;
