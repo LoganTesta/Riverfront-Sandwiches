@@ -1472,6 +1472,7 @@ body {
         left: 700px;
         right: 0;
         width: 329px;
+        max-width: none;
     }
 
         .main-title-container .main-title__title, .main-title-container .main-title__word-two {
