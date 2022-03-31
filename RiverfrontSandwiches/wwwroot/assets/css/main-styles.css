@@ -970,7 +970,8 @@ body {
 }
 
 .slideshow__image {
-    min-height: 200px;
+    position: relative;
+    min-height: 220px;
     padding-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
@@ -979,12 +980,12 @@ body {
 
 .slideshow__header {
     position: absolute;
-    top: 159px;
+    bottom: 5px;
     left: 2%;
     z-index: 10;
     width: 96%;
     padding: 5px 5px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: normal;
     text-align: center;
     background-color: rgba(16, 116, 149, 0.9);
@@ -1306,6 +1307,10 @@ body {
             font-size: 32px;
         }
 
+    .slideshow__header {
+        bottom: 10px;
+    }
+
 }
 
 
@@ -1403,7 +1408,7 @@ body {
     }
 
     .slideshow__header {
-        top: 197px;
+      
     }
 
     .slideshow__icon.left {
@@ -1599,8 +1604,7 @@ body {
     }
 
     .slideshow__header {
-        top: 309px;
-        font-size: 26px;
+        font-size: 20px;
     }
 
     .slideshow__icon.left {
