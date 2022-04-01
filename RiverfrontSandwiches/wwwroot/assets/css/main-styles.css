@@ -815,11 +815,11 @@ body {
 
 .footer__subscribe-button {
     display: block;
-    padding: 10px 15px;
+    padding: 8px 12px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 15px;
-    font-size: 19px;
+    font-size: 16px;
     font-weight: bold;
     background-color: #ffffff;
     color: #ee3311;
@@ -913,9 +913,9 @@ body {
         display: inline-block;
         width: 100%;
         height: 100%;
-        padding: 12px 15px;
+        padding: 10px 12px;
         border-radius: 5px;
-        font-size: 19px;
+        font-size: 16px;
         font-weight: bold;
         color: #ffffff;
         transition: 0.5s;
@@ -1377,6 +1377,11 @@ body {
         text-align: left;
     }
 
+    .footer__subscribe-button {
+        padding: 10px 15px;
+        font-size: 19px;
+    }
+
 
     /*General use styles*/
     .background-hero-image {
@@ -1392,12 +1397,17 @@ body {
         margin-right: 0;
     }
 
+        .learn-more .learn-more__link {
+            padding: 12px 15px;
+            font-size: 19px;
+        }
 
 
-    /*Index*/
-    .background-hero-image.index-three {
-        margin-bottom: 0;
-    }
+
+        /*Index*/
+        .background-hero-image.index-three {
+            margin-bottom: 0;
+        }
 
     .slideshow {
         padding-bottom: 0;
