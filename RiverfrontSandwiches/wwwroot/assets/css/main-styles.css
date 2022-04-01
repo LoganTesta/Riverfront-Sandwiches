@@ -740,7 +740,7 @@ body {
     }
 
 .footer__social {
-    width: 109px;
+    width: 119px;
     padding-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
@@ -748,7 +748,7 @@ body {
 
 .footer__social-item {
     display: inline-block;
-    padding-right: 20px;
+    padding-right: 25px;
 }
 
     .footer__social-item:last-of-type {
