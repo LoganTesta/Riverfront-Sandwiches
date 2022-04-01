@@ -740,7 +740,7 @@ body {
     }
 
 .footer__social {
-    width: 148px;
+    width: 109px;
     padding-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
@@ -748,7 +748,7 @@ body {
 
 .footer__social-item {
     display: inline-block;
-    padding-right: 30px;
+    padding-right: 20px;
 }
 
     .footer__social-item:last-of-type {
@@ -764,6 +764,10 @@ body {
             color: #f9f9f9;
             transition: 0.5s ease-in;
         }
+
+    .footer__social-item .fa-2x {
+        font-size: 1.5em;
+    }
 
 .footer__general-info {
     padding-bottom: 30px;
@@ -1307,8 +1311,21 @@ body {
             font-size: 32px;
         }
 
+
     .slideshow__header {
         bottom: 10px;
+    }
+
+
+    .footer__social {
+        width: 148px;
+    }
+
+    .footer__social-item {
+        padding-right: 30px;
+    }
+    .footer__social-item .fa-2x {
+        font-size: 2em;
     }
 
 }
