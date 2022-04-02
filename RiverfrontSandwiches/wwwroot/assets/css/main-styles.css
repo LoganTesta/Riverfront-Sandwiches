@@ -444,7 +444,7 @@ h4 {
     color: #ee3311;
 }
 
-p {
+p, .footer {
     line-height: 1.5;
 }
 
@@ -690,11 +690,11 @@ body {
 }
 
 .footer__copyright, .footer__locations, .footer__phone {
-    width: 80%;
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -799,6 +799,7 @@ body {
 }
 
 .footer__subscribe-subheader {
+    font-size: 20px;
     text-align: center;
     color: #85da10;
 }
@@ -1360,6 +1361,10 @@ body {
         padding-right: 30px;
     }
 
+    .footer__copyright, .footer__locations, .footer__phone {
+        font-size: 19px;
+    }
+
     .footer__general-info {
         padding-bottom: 0;
         text-align: left;
@@ -1391,6 +1396,7 @@ body {
     }
 
     .footer__subscribe-subheader {
+        font-size: 24px;
         text-align: left;
     }
 
@@ -1563,6 +1569,10 @@ body {
         .nav__nav-item:last-of-type {
             padding-right: 0;
         }
+
+    .footer__subscribe-subheader {
+        font-size: 26px;
+    }
 
     .footer__copyright {
         width: 50%;
