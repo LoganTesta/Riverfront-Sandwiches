@@ -449,7 +449,7 @@ p, .footer {
 }
 
 input, textarea {
-    padding: 12px 15px;
+    padding: 6px 8px;
     color: #ee3311;
     font-size: 19px;
     font-weight: bold; 
@@ -466,7 +466,7 @@ input, textarea {
 }
 
 .form__input-container {
-    padding: 10px;
+    padding: 10px 0;
 }
 
     .form__input-container:last-of-type {
@@ -495,7 +495,7 @@ input, textarea {
 
 .form__submit-button {
     border-radius: 15px;
-    font-size: 19px;
+    font-size: 16px;
     font-weight: bold;
     background-color: #ffffff;
     cursor: pointer;
@@ -1216,17 +1216,17 @@ body {
 }
 
 .event__inner-container {
-    padding: 15px;
+    padding: 10px;
     border: 2px solid #888;
     border-radius: 15px;
     background-color: #eeeeee;
 }
 
 .event__title {
-    padding-left: 15px;
+    margin-bottom: 10px;
     font-size: 19px;
     font-weight: bold;
-    margin-bottom: 10px;
+    text-align: center;
     color: #ee3311;
 }
 
@@ -1244,7 +1244,7 @@ body {
 }
 
 .contact-form {
-    padding: 12px 10px;
+    padding: 10px;
     margin-bottom: 20px;
     background-color: #ee3311;
     border-radius: 10px;
@@ -1346,6 +1346,10 @@ body {
         text-align: left;
     }
 
+    input, textarea {
+        padding: 12px 15px;
+    }
+
     .main-title-container {
     }
 
@@ -1422,6 +1426,10 @@ body {
         margin-bottom: 0;
     }
 
+    .form__submit-button {
+        font-size: 19px;
+    }
+
     .learn-more {
         margin-left: 0;
         margin-right: 0;
@@ -1471,8 +1479,17 @@ body {
         margin-bottom: 0;
     }
 
+    /*Events*/
+    .event__inner-container { 
+        padding: 15px;
+    }
+
+    .event__title {
+    }
+
     /*Contact Us*/
     .contact-form {
+        padding: 15px;
         margin-bottom: 0px;
     }
 }
@@ -1622,7 +1639,7 @@ body {
 
 
     .form__input-container {
-        padding: 15px;
+        padding: 15px 0;
     }
 
     .form__label {
