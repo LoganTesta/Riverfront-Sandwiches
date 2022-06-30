@@ -14,3 +14,44 @@
 
 
 /***############### Website Specific Styles. ***/
+
+
+@media only print and (min-width: 500px) {
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .main-title-container {
+        top: 120px;
+        right: 15%;
+        max-width: 204px;
+        padding: 10px 15px;
+    }
+
+        .main-title-container .main-title__title, .main-title-container .main-title__word-two {
+            font-size: 32px;
+        }
+
+
+    .slideshow__header {
+        bottom: 10px;
+    }
+
+
+    .footer__social {
+        width: 148px;
+    }
+
+    .footer__social-item {
+        padding-right: 30px;
+    }
+
+        .footer__social-item .fa-2x {
+            font-size: 2em;
+        }
+}
