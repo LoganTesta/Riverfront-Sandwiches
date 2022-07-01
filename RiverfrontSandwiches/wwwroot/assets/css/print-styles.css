@@ -15,9 +15,20 @@
 
 /***############### Website Specific Styles. ***/
 
+/* Prevent mid-item splitting onto two pages if possible */
+.slideshow,
+.background-hero-image,
+.headquarters-bg,
+.location__background,
+.menu-item__background,
+.event__inner-container {
+    break-inside: avoid;
+    page-break-inside: avoid; /*Older version*/
+}
+
+
 
 @media only print and (min-width: 500px) {
-
     h2 {
         font-size: 26px;
     }
