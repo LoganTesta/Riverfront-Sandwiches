@@ -933,10 +933,14 @@ body {
         transition: 0.5s;
     }
 
+        .learn-more:hover .learn-more__link {
+            font-style: italic;
+        }
 
-.form-response, .subscribe-form-response {
-    padding-bottom: 15px;
-}
+
+        .form-response, .subscribe-form-response {
+            padding-bottom: 15px;
+        }
 
 .javascript-validation-results-contact-us, .javascript-validation-results-subscribe {
     padding-bottom: 15px;
