@@ -424,7 +424,15 @@ input, textarea, select {
 
 
 a {
+    display: block;
     color: #000099;
+}
+
+a:focus,
+a:focus-visible,
+button:focus,
+button:focus-visible { 
+    outline: 2px solid #ee3311; outline-offset: 2px; 
 }
 
 h2, h3, h4 {
@@ -459,10 +467,11 @@ input, textarea {
     transition: box-shadow 0.5s;
 }
 
-    input:focus, textarea:focus {
-        box-shadow: 0 0 4px 6px rgba(16, 116, 149, 0.8);
-        transition: box-shadow 0.5s;
-    }
+input:focus, textarea:focus {
+    box-shadow: 0 0 4px 6px rgba(16, 116, 149, 0.8);
+    transition: box-shadow 0.5s;
+}
+
 
 /*General classes*/
 .form {
@@ -472,9 +481,9 @@ input, textarea {
     padding: 10px 0;
 }
 
-    .form__input-container:last-of-type {
-        padding-bottom: 0;
-    }
+.form__input-container:last-of-type {
+    padding-bottom: 0;
+}
 
 .form__label {
     display: inline-block;
@@ -505,11 +514,11 @@ input, textarea {
     transition: 0.5s ease-in;
 }
 
-    .form__submit-button:hover {
-        background-color: #dddddd;
-        box-shadow: 0 0 4px 6px rgba(16, 116, 149, 0.8);
-        transition: 0.5s ease-in;
-    }
+.form__submit-button:hover {
+    background-color: #dddddd;
+    box-shadow: 0 0 4px 6px rgba(16, 116, 149, 0.8);
+    transition: 0.5s ease-in;
+}
 
 
 body {
@@ -603,6 +612,10 @@ body {
     left: 20px;
     width: 80px;
     height: 80px;
+}
+
+.logo-container__link {
+    display: block;
 }
 
 
@@ -811,7 +824,11 @@ body {
     color: #eeeeee;
 }
 
-.footer__subscribe input:focus, .footer__subscribe textarea:focus {
+.footer__subscribe input:focus,
+.footer__subscribe textarea:focus,
+.footer__subscribe input:focus-visible,
+.footer__subscribe textarea:focus-visible
+{
     box-shadow: 0 0 4px 6px rgba(133, 218, 16, 0.8);
     transition: box-shadow 0.5s;
 }
