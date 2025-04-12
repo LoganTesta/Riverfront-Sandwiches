@@ -739,21 +739,20 @@ body {
 
 .footer__nav-item {
     padding-bottom: 15px;
-
+    text-align: center;
 }
 
 .footer .footer__nav-link {
-    display: block;
-    text-align: center;
+    display: inline-block;
     font-size: 18px;
     color: #ffffff;
     transition: 0.2s ease-in;
 }
 
-    .footer .footer__nav-link:hover {
-        color: #85da10;
-        transition: 0.2s ease-in;
-    }
+.footer .footer__nav-link:hover {
+    color: #85da10;
+    transition: 0.2s ease-in;
+}
 
 .footer__social {
     width: 119px;
