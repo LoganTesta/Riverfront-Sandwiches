@@ -101,7 +101,7 @@ namespace RiverfrontSandwiches.Components
 
                     using (var destinationSmtp = new SmtpClient())
                     {
-                        destinationSmtp.Connect("cmx5.my-hosting-panel.com", 465, true);
+                        destinationSmtp.Connect("p1432.use1.mysecurecloudhost.com", 465, true);
                         destinationSmtp.Authenticate("youremail", "yourpassword");
                         destinationSmtp.Send(emailMessage);
                         destinationSmtp.Disconnect(true);
