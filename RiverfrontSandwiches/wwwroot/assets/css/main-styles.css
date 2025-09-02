@@ -459,6 +459,10 @@ p, .footer {
     line-height: 1.5;
 }
 
+address { 
+    font-style: normal;
+}
+
 input, textarea {
     padding: 6px 8px;
     color: #ee3311;
